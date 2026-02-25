@@ -1,0 +1,164 @@
+{
+  "nav": {
+    "about": "About",
+    "experience": "Experience",
+    "projects": "Projects",
+    "skills": "Skills",
+    "contact": "Contact",
+    "resume": "Resume"
+  },
+  "hero": {
+    "greeting": "Hey, I'm",
+    "name": "Owen Morales",
+    "roles": ["Software Engineer", "Data Scientist", "Full-Stack Developer", "ML Engineer", "Problem Solver"],
+    "cta_projects": "View My Work",
+    "cta_resume": "Download Resume",
+    "scroll": "Scroll to explore"
+  },
+  "about": {
+    "label": "My Story",
+    "education_label": "Education",
+    "toggle_show": "Learn my story",
+    "toggle_hide": "Hide story",
+    "title": "From the shores of Costa Rica to the frontier of software.",
+    "p1": "I grew up on the Pacific coast of Costa Rica — a place that shaped my roots and gave me a deep love for this world. From early on, technology fascinated me. Before coming to the US, I dedicated two years of my life serving a mission — helping people, learning to listen, and growing in ways I never expected. My family has been the foundation of everything: they've supported, pushed, and believed in me to become not just what I want to be, but what I've always dreamed of.",
+    "p2": "That journey brought me to the United States, where I'm pursuing Computer Science at BYU-Idaho while I earned an Associate's in Business Statistics at BYU. I've maintained a 3.98 GPA not because I'm chasing numbers, but because I genuinely love learning.",
+    "p3": "Over the past few years I've gone from writing automation scripts at Verizon, to engineering integrations at BYU that save over $110K annually, to helping millions of FamilySearch users with reliable software — and co-founding Daily Disciple, an app that grew 87% month-over-month. Data science and AI are woven into everything I build: I believe the best engineers understand both the system and the story behind the data.",
+    "p4": "When I'm not writing code, you'll find me on Rainbow Six, or spending time with the people I love most. I believe in shipping fast, learning faster, and never losing sight of what matters.",
+    "photo_alt": "Owen Morales"
+  },
+  "experience": {
+    "title": "Experience",
+    "subtitle": "A track record of delivering real impact across engineering, data, and product.",
+    "present": "Present"
+  },
+  "experienceItems": [
+    {
+      "title": "CS Teaching Assistant",
+      "company": "Brigham Young University – Idaho",
+      "bullets": [
+        "Validated cloud-native architectures utilizing AWS, Docker, and Kubernetes, enforcing 100% compliance with industry standards in serverless scaling, NoSQL database design, and event-driven systems.",
+        "Mentored 100+ students in HTML/CSS/JS, boosting multi-level instructional strategies.",
+        "Guided CI/CD and IaC, streamlining workflows and incident response protocols for 1,000+ assignments."
+      ]
+    },
+    {
+      "title": "Co-Founder & Developer",
+      "company": "Daily Disciple",
+      "bullets": [
+        "Co-founded an app on React, Expo, and Node.js, successfully launching to thousands of active users.",
+        "Designed the platform to help users plan and track spiritual and daily goals, achieving 87% monthly growth.",
+        "Implemented real-time tracking features, raising task completion by 76% and decreasing churn by 32%."
+      ]
+    },
+    {
+      "title": "Software Engineer",
+      "company": "FamilySearch",
+      "bullets": [
+        "Executed 350+ test cases in C# (NUnit) and Azure Functions, ensuring reliability for 13.7M users.",
+        "Built a feature from concept to deployment, adjusting coverage to 97% and eliminating manual testing.",
+        "Refactored 10,000+ lines of code, elevating performance by 36% through test suites in Azure."
+      ]
+    },
+    {
+      "title": "Software Developer",
+      "company": "Brigham Young University",
+      "bullets": [
+        "Architected BYU's CSAT platform on Genesys, Twilio API, and iPaaS, enabling automated feedback for 70,000+ people.",
+        "Digitized Financial Aid via JavaScript, iPaaS, and TDX API, saving $110K+ annually for 100K+ users.",
+        "Engineered an automated TypeScript parsing system that powers 5,000+ monthly AI assistant interactions."
+      ]
+    },
+    {
+      "title": "Researcher",
+      "company": "CCS Global Tech",
+      "bullets": [
+        "Optimized data pipelines in R, SQL, Snowflake, and Python, incorporating 87% of predictive analytics.",
+        "Redesigned CRM workflows consolidating UI/UX architecture, raising staff productivity by 34% across 5,000+ client records.",
+        "Mentored 20+ engineers on data and analytics best practices."
+      ]
+    },
+    {
+      "title": "Technician",
+      "company": "Verizon",
+      "bullets": [
+        "Programmed a C#/ASP.NET tool for JIRA, increasing team output by 78% and streamlining workflow projects.",
+        "Linked MTAS/MSAT and Salesforce workflows, producing $148K in annual savings as technical lead.",
+        "Simplified internal processes for Visible, increasing team efficiency and delivery consistency."
+      ]
+    }
+  ],
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Things I've built — from AI-powered apps to systems-level tools.",
+    "view_github": "View on GitHub",
+    "close": "Close",
+    "tech_label": "Tech Stack",
+    "highlights_label": "Highlights"
+  },
+  "projectItems": [
+    {
+      "description": "From feeling to meaning. An AI-powered reflection app that processes real-time sentiment and delivers daily personal insights.",
+      "longDescription": "Built during BYU Hackathon, Phronesis is an Expo/React Native mobile app backed by Node.js and Firebase that processes over 1,000 user reflections. The app uses AssemblyAI for real-time sentiment analysis, delivering insights in under 5 seconds, and achieved a 41% correlation in its AI dashboards for 100+ active users.",
+      "metrics": ["100+ active users", "41% correlation in AI insights", "<5s sentiment processing", "1,000+ reflections processed"]
+    },
+    {
+      "description": "Military-grade AES-256-GCM encryption for 6,000+ files with automated folder monitoring and CLI management tools.",
+      "longDescription": "A Rust-based CLI application that watches directories for changes and automatically encrypts/decrypts files using AES-256-GCM. Features robust key management, background processing, and configurable sync via API or local LAN. Decreased manual input by 87% while securing thousands of files.",
+      "metrics": ["6,000+ files secured", "87% reduction in manual input", "AES-256-GCM encryption", "Background sync processing"]
+    },
+    {
+      "description": "Led 7 workshops on Python, R, Tableau, and Power BI for 80+ participants, uncovering $11K in annual inefficiencies.",
+      "longDescription": "A comprehensive data analytics initiative where AI/ML optimization models and reports were used to uncover operational inefficiencies worth $11,000 annually. Applied predictive modeling to drive data-informed decisions, and conducted workshops for 80+ participants on dashboard design and data pipelines.",
+      "metrics": ["$11K in savings identified", "80+ workshop participants", "7 workshops led", "Predictive modeling applied"]
+    },
+    {
+      "description": "An interactive global map that visualizes emotions from social posts and text messages in real time.",
+      "longDescription": "A real-time data visualization platform built in Go that aggregates emotional sentiment from social posts and text messages and renders them on a live, interactive global map. Emotisphere transforms raw text data into geographic emotional insights, providing a unique lens on the world's collective mood.",
+      "metrics": ["Real-time sentiment mapping", "Global geographic visualization", "Social data aggregation", "Go backend"]
+    },
+    {
+      "description": "TypeScript/Node.js integration layer syncing JSON through TDX API, cutting manual processing by 88%.",
+      "longDescription": "An automated TypeScript/Node.js application that syncs knowledge base articles through the TDX API, doubling data precision. Orchestrated an automated scraper and integration layer for Genesys, and engineered a module for position-based prompt activation from real-time schedules, transforming operational flow.",
+      "metrics": ["88% reduction in manual processing", "Double data precision", "5,000+ monthly AI interactions", "Real-time schedule activation"]
+    },
+    {
+      "description": "Do sentiments matter in the current financial world? A Python-powered analysis of crypto market sentiment vs. price.",
+      "longDescription": "A data science project exploring the relationship between social sentiment and cryptocurrency market performance. Using Python and NLP techniques, the project analyzes whether public sentiment on social media platforms has a statistically significant correlation with price movements in crypto markets.",
+      "metrics": ["Sentiment vs. price correlation", "Python NLP pipeline", "Market data analysis", "Statistical modeling"]
+    }
+  ],
+  "skills": {
+    "title": "Skills",
+    "subtitle": "The tools I reach for and the ones I've mastered.",
+    "categories": {
+      "languages": "Languages",
+      "frontend": "Frontend",
+      "backend": "Backend & Cloud",
+      "data": "Data & ML",
+      "tools": "Tools & DevOps"
+    }
+  },
+  "contact": {
+    "title": "Let's Build Something",
+    "subtitle": "Have a project, an idea, or just want to connect? I'd love to hear from you.",
+    "name_label": "Your Name",
+    "name_placeholder": "John Doe",
+    "email_label": "Your Email",
+    "email_placeholder": "john@example.com",
+    "message_label": "Message",
+    "message_placeholder": "Tell me about your project or just say hello...",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent! I'll get back to you soon.",
+    "error": "Something went wrong. Please try again.",
+    "or": "or",
+    "resume_cta": "Download my resume to learn more about my background.",
+    "resume_button": "Download Resume"
+  },
+  "footer": {
+    "tagline": "Built with curiosity. Deployed with care.",
+    "copyright": "© {year} Owen Morales. All rights reserved.",
+    "made_with": "Made in Costa Rica 🌊"
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "nav": {
+    "about": "Sobre mí",
+    "experience": "Experiencia",
+    "projects": "Proyectos",
+    "skills": "Habilidades",
+    "contact": "Contacto",
+    "resume": "Currículum"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "name": "Owen Morales",
+    "roles": ["Ingeniero de Software", "Científico de Datos", "Desarrollador Full-Stack", "Ingeniero ML", "Solucionador de Problemas"],
+    "cta_projects": "Ver Mi Trabajo",
+    "cta_resume": "Descargar Currículum",
+    "scroll": "Desliza para explorar"
+  },
+  "about": {
+    "label": "Mi Historia",
+    "education_label": "Educación",
+    "toggle_show": "Conoce mi historia",
+    "toggle_hide": "Ocultar historia",
+    "title": "Desde las costas de Costa Rica hasta la frontera del software.",
+    "p1": "Crecí en la costa del Pacífico de Costa Rica — un lugar que formó mis raíces y me dio un amor profundo por este mundo. Desde pequeño, la tecnología me fascinó. Antes de venir a los Estados Unidos, dediqué dos años de mi vida sirviendo una misión — ayudando a personas, aprendiendo a escuchar, y creciendo de maneras que nunca imaginé. Mi familia ha sido el pilar de todo: me han apoyado, impulsado y creído en mí para convertirme no solo en lo que quiero ser, sino en lo que siempre soñé.",
+    "p2": "Ese camino me trajo a los Estados Unidos, donde estudio Ciencias de la Computación en BYU-Idaho mientras obtuve un Asociado en Estadística de Negocios en BYU. Mantengo un GPA de 3.98 no porque persiga números, sino porque genuinamente me apasiona aprender.",
+    "p3": "En los últimos años he pasado de escribir scripts de automatización en Verizon, a diseñar integraciones en BYU que ahorran más de $110K anuales, a ayudar a millones de usuarios de FamilySearch con software confiable — y co-fundé Daily Disciple, una app que creció un 87% mes a mes. La ciencia de datos y la IA están entretejidas en todo lo que construyo: creo que los mejores ingenieros entienden tanto el sistema como la historia detrás de los datos.",
+    "p4": "Cuando no estoy escribiendo código, me encuentras en Rainbow Six, o pasando tiempo con las personas que más amo. Creo en lanzar rápido, aprender más rápido, y nunca perder de vista lo que importa.",
+    "photo_alt": "Owen Morales"
+  },
+  "experience": {
+    "title": "Experiencia",
+    "subtitle": "Un historial de impacto real en ingeniería, datos y producto.",
+    "present": "Presente"
+  },
+  "experienceItems": [
+    {
+      "title": "Asistente de Docencia en Ciencias de la Computación",
+      "company": "Brigham Young University – Idaho",
+      "bullets": [
+        "Validé arquitecturas nativas en la nube con AWS, Docker y Kubernetes, garantizando 100% de cumplimiento con estándares de escalado serverless, diseño NoSQL y sistemas orientados a eventos.",
+        "Mentoré a más de 100 estudiantes en HTML/CSS/JS, potenciando estrategias de instrucción multinivel.",
+        "Guié CI/CD e IaC, optimizando flujos de trabajo y protocolos de respuesta para más de 1,000 tareas."
+      ]
+    },
+    {
+      "title": "Co-Fundador y Desarrollador",
+      "company": "Daily Disciple",
+      "bullets": [
+        "Co-fundé una app con React, Expo y Node.js, lanzándola exitosamente a miles de usuarios activos.",
+        "Diseñé la plataforma para ayudar a los usuarios a planificar y rastrear metas espirituales y diarias, logrando un crecimiento mensual del 87%.",
+        "Implementé funciones de seguimiento en tiempo real, elevando la tasa de completitud de tareas en un 76% y reduciendo la deserción en un 32%."
+      ]
+    },
+    {
+      "title": "Ingeniero de Software",
+      "company": "FamilySearch",
+      "bullets": [
+        "Ejecuté más de 350 casos de prueba en C# (NUnit) y Azure Functions, garantizando confiabilidad para 13.7M de usuarios.",
+        "Construí una función desde el concepto hasta el despliegue, ajustando la cobertura al 97% y eliminando las pruebas manuales.",
+        "Refactoricé más de 10,000 líneas de código, elevando el rendimiento en un 36% mediante suites de prueba en Azure."
+      ]
+    },
+    {
+      "title": "Desarrollador de Software",
+      "company": "Brigham Young University",
+      "bullets": [
+        "Arquitecté la plataforma CSAT de BYU en Genesys, Twilio API e iPaaS, habilitando retroalimentación automatizada para más de 70,000 personas.",
+        "Digitalicé Ayuda Financiera con JavaScript, iPaaS y TDX API, ahorrando más de $110K anuales para más de 100K usuarios.",
+        "Diseñé un sistema automatizado de parsing en TypeScript que impulsa más de 5,000 interacciones mensuales con el asistente de IA."
+      ]
+    },
+    {
+      "title": "Investigador",
+      "company": "CCS Global Tech",
+      "bullets": [
+        "Optimicé pipelines de datos en R, SQL, Snowflake y Python, incorporando el 87% de los análisis predictivos.",
+        "Rediseñé los flujos de trabajo del CRM consolidando la arquitectura UI/UX, elevando la productividad del personal en un 34% en más de 5,000 registros.",
+        "Mentoré a más de 20 ingenieros en buenas prácticas de datos y analítica."
+      ]
+    },
+    {
+      "title": "Técnico",
+      "company": "Verizon",
+      "bullets": [
+        "Programé una herramienta C#/ASP.NET para JIRA, aumentando el rendimiento del equipo en un 78% y optimizando los proyectos de flujo de trabajo.",
+        "Vinculé los flujos de MTAS/MSAT y Salesforce, generando $148K en ahorros anuales como líder técnico.",
+        "Simplifiqué procesos internos para Visible, aumentando la eficiencia del equipo y la consistencia en las entregas."
+      ]
+    }
+  ],
+  "projects": {
+    "title": "Proyectos",
+    "subtitle": "Cosas que he construido — desde apps con IA hasta herramientas de sistemas.",
+    "view_github": "Ver en GitHub",
+    "close": "Cerrar",
+    "tech_label": "Stack Tecnológico",
+    "highlights_label": "Destacados"
+  },
+  "projectItems": [
+    {
+      "description": "Del sentimiento al significado. Una app de reflexión con IA que procesa sentimientos en tiempo real y entrega insights personales diarios.",
+      "longDescription": "Construida durante el Hackathon de BYU, Phronesis es una app móvil en Expo/React Native respaldada por Node.js y Firebase que procesa más de 1,000 reflexiones de usuarios. La app usa AssemblyAI para análisis de sentimiento en tiempo real, entregando insights en menos de 5 segundos, con una correlación del 41% en sus dashboards de IA para más de 100 usuarios activos.",
+      "metrics": ["Más de 100 usuarios activos", "41% de correlación en insights de IA", "<5s en procesamiento de sentimientos", "Más de 1,000 reflexiones procesadas"]
+    },
+    {
+      "description": "Cifrado militar AES-256-GCM para más de 6,000 archivos con monitoreo automatizado de carpetas y herramientas de gestión CLI.",
+      "longDescription": "Una aplicación CLI basada en Rust que monitorea directorios y cifra/descifra archivos automáticamente usando AES-256-GCM. Incluye gestión robusta de claves, procesamiento en segundo plano y sincronización configurable vía API o LAN local. Redujo la intervención manual en un 87% mientras protege miles de archivos.",
+      "metrics": ["Más de 6,000 archivos protegidos", "87% menos intervención manual", "Cifrado AES-256-GCM", "Procesamiento de sincronización en segundo plano"]
+    },
+    {
+      "description": "Dirigí 7 talleres sobre Python, R, Tableau y Power BI para más de 80 participantes, descubriendo $11K en ineficiencias anuales.",
+      "longDescription": "Una iniciativa integral de analítica de datos donde se usaron modelos de optimización con IA/ML para descubrir ineficiencias operativas por $11,000 anuales. Se aplicó modelado predictivo para tomar decisiones basadas en datos, y se realizaron talleres para más de 80 participantes sobre diseño de dashboards y pipelines de datos.",
+      "metrics": ["$11K en ahorros identificados", "Más de 80 participantes en talleres", "7 talleres dirigidos", "Modelado predictivo aplicado"]
+    },
+    {
+      "description": "Un mapa global interactivo que visualiza emociones de publicaciones sociales y mensajes de texto en tiempo real.",
+      "longDescription": "Una plataforma de visualización de datos en tiempo real construida en Go que agrega sentimientos emocionales de publicaciones sociales y mensajes de texto y los renderiza en un mapa global interactivo en vivo. Emotisphere transforma datos de texto sin procesar en insights emocionales geográficos, ofreciendo una perspectiva única del estado de ánimo colectivo del mundo.",
+      "metrics": ["Mapeo de sentimientos en tiempo real", "Visualización geográfica global", "Agregación de datos sociales", "Backend en Go"]
+    },
+    {
+      "description": "Capa de integración TypeScript/Node.js que sincroniza JSON a través de TDX API, reduciendo el procesamiento manual en un 88%.",
+      "longDescription": "Una aplicación automatizada en TypeScript/Node.js que sincroniza artículos de bases de conocimiento a través de TDX API, duplicando la precisión de los datos. Orquestó un scraper automático y una capa de integración para Genesys, e implementó un módulo de activación de prompts basado en posición desde horarios en tiempo real, transformando el flujo operativo.",
+      "metrics": ["88% menos procesamiento manual", "Doble precisión de datos", "Más de 5,000 interacciones mensuales con IA", "Activación de horarios en tiempo real"]
+    },
+    {
+      "description": "¿Importan los sentimientos en el mundo financiero actual? Un análisis en Python del sentimiento del mercado cripto vs. precio.",
+      "longDescription": "Un proyecto de ciencia de datos que explora la relación entre el sentimiento social y el rendimiento del mercado de criptomonedas. Usando Python y técnicas de NLP, el proyecto analiza si el sentimiento público en redes sociales tiene una correlación estadísticamente significativa con los movimientos de precios en los mercados cripto.",
+      "metrics": ["Correlación sentimiento vs. precio", "Pipeline NLP en Python", "Análisis de datos de mercado", "Modelado estadístico"]
+    }
+  ],
+  "skills": {
+    "title": "Habilidades",
+    "subtitle": "Las herramientas que uso y las que he dominado.",
+    "categories": {
+      "languages": "Lenguajes",
+      "frontend": "Frontend",
+      "backend": "Backend & Cloud",
+      "data": "Datos & ML",
+      "tools": "Herramientas & DevOps"
+    }
+  },
+  "contact": {
+    "title": "Construyamos Algo",
+    "subtitle": "¿Tienes un proyecto, una idea, o simplemente quieres conectar? Me encantaría saber de ti.",
+    "name_label": "Tu Nombre",
+    "name_placeholder": "Juan Pérez",
+    "email_label": "Tu Correo",
+    "email_placeholder": "juan@ejemplo.com",
+    "message_label": "Mensaje",
+    "message_placeholder": "Cuéntame sobre tu proyecto o simplemente saluda...",
+    "send": "Enviar Mensaje",
+    "sending": "Enviando...",
+    "success": "¡Mensaje enviado! Me comunicaré contigo pronto.",
+    "error": "Algo salió mal. Por favor intenta de nuevo.",
+    "or": "o",
+    "resume_cta": "Descarga mi currículum para conocer más sobre mi trayectoria.",
+    "resume_button": "Descargar Currículum"
+  },
+  "footer": {
+    "tagline": "Construido con curiosidad. Desplegado con cuidado.",
+    "copyright": "© {year} Owen Morales. Todos los derechos reservados.",
+    "made_with": "Hecho en Costa Rica 🌊"
+  }
+}

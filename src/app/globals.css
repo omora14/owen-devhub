@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: 'Inter', sans-serif;
+  --font-playfair: 'Playfair Display', serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #080F1A;
+  color: #F0EDE8;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #080F1A;
+}
+::-webkit-scrollbar-thumb {
+  background: #E8650A;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F5831F;
+}
+
+/* Selection color */
+::selection {
+  background-color: rgba(232, 101, 10, 0.35);
+  color: #F0EDE8;
+}
+
+/* Smooth anchor scrolling offset for sticky nav */
+[id] {
+  scroll-margin-top: 80px;
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-sunset-orange via-sunset-flame to-sunset-gold;
+  }
+
+  .text-gradient-warm {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-sunset-gold to-sunset-flame;
+  }
+
+  .glass {
+    @apply bg-white/5 backdrop-blur-md border border-white/10;
+  }
+
+  .glass-dark {
+    @apply bg-ocean-deep/80 backdrop-blur-md border border-white/10;
+  }
+
+  .card-hover {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-sunset-orange/10;
+  }
+
+  .section-padding {
+    @apply px-4 sm:px-8 lg:px-16 xl:px-24;
+  }
+
+  .glow-orange {
+    box-shadow: 0 0 40px rgba(232, 101, 10, 0.3), 0 0 80px rgba(232, 101, 10, 0.1);
+  }
+}
+
+/* Wave animation for hero */
+@keyframes waveAnim {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.wave-animate {
+  animation: waveAnim 20s linear infinite;
+}
+
+/* Typewriter cursor blink */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* Fade in animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.7s ease-out forwards;
+}
+
+/* Stagger delays */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+.delay-700 { animation-delay: 700ms; }
