@@ -1,12 +1,14 @@
+import dynamic from 'next/dynamic';
 import { setRequestLocale } from 'next-intl/server';
 import Navbar from '@/components/sections/Navbar';
 import Hero from '@/components/sections/Hero';
 import About from '@/components/sections/About';
-import Experience from '@/components/sections/Experience';
-import Projects from '@/components/sections/Projects';
-import Skills from '@/components/sections/Skills';
-import Contact from '@/components/sections/Contact';
-import Footer from '@/components/sections/Footer';
+
+const Experience = dynamic(() => import('@/components/sections/Experience'));
+const Projects = dynamic(() => import('@/components/sections/Projects'));
+const Skills = dynamic(() => import('@/components/sections/Skills'));
+const Contact = dynamic(() => import('@/components/sections/Contact'));
+const Footer = dynamic(() => import('@/components/sections/Footer'));
 
 const locales = ['en', 'es'];
 

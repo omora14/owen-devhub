@@ -26,17 +26,22 @@ export default function Navbar() {
   const [activeSection, setActiveSection] = useState('');
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      setScrolled(window.scrollY > 30);
-
-      const sections = ['about', 'experience', 'projects', 'skills', 'contact'];
-      const current = sections.find((id) => {
-        const el = document.getElementById(id);
-        if (!el) return false;
-        const rect = el.getBoundingClientRect();
-        return rect.top <= 120 && rect.bottom >= 120;
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        setScrolled(window.scrollY > 30);
+        const sections = ['about', 'experience', 'projects', 'skills', 'contact'];
+        const current = sections.find((id) => {
+          const el = document.getElementById(id);
+          if (!el) return false;
+          const rect = el.getBoundingClientRect();
+          return rect.top <= 120 && rect.bottom >= 120;
+        });
+        setActiveSection(current || '');
+        ticking = false;
       });
-      setActiveSection(current || '');
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
@@ -59,14 +64,11 @@ export default function Navbar() {
 
   return (
     <>
-      <motion.header
-        initial={{ y: -80, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, ease: 'easeOut' }}
+      <header
         className={cn(
-          'fixed top-0 left-0 right-0 z-50 transition-all duration-500',
+          'fixed top-0 left-0 right-0 z-50 transition-all duration-500 animate-nav-in',
           scrolled
-            ? 'bg-ocean-deep/90 backdrop-blur-xl border-b border-white/10 shadow-2xl shadow-black/50'
+            ? 'bg-ocean-deep/90 backdrop-blur-sm border-b border-white/10 shadow-2xl shadow-black/50'
             : 'bg-transparent'
         )}
       >
@@ -76,8 +78,8 @@ export default function Navbar() {
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="flex items-center gap-2 group"
           >
-            <span className="text-xl font-display font-bold text-gradient">Owen</span>
-            <span className="text-sm font-mono text-sand/60 group-hover:text-sunset-orange transition-colors duration-200">
+            <span className="text-xl font-display font-bold text-sunset-orange">Owen</span>
+            <span className="text-sm font-mono text-sand-warm/70 group-hover:text-sunset-orange transition-colors duration-200">
               — DevHub
             </span>
           </button>
@@ -140,7 +142,7 @@ export default function Navbar() {
             </button>
           </div>
         </nav>
-      </motion.header>
+      </header>
 
       {/* Mobile menu overlay */}
       <AnimatePresence>
@@ -150,7 +152,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.25 }}
-            className="fixed inset-x-0 top-16 z-40 bg-ocean-deep/95 backdrop-blur-xl border-b border-white/10 shadow-2xl md:hidden"
+            className="fixed inset-x-0 top-16 z-40 bg-ocean-deep/95 backdrop-blur-sm border-b border-white/10 shadow-2xl md:hidden"
           >
             <div className="px-4 py-6 flex flex-col gap-2">
               {navLinks.map(({ key, href }) => (

@@ -5,6 +5,7 @@ import { useTranslations } from 'next-intl';
 import { motion, useInView } from 'framer-motion';
 import { Code2, Layers, Server, BarChart3, Wrench } from 'lucide-react';
 import { skills } from '@/lib/data';
+import { cn } from '@/lib/utils';
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
@@ -47,29 +48,30 @@ const categoryConfig = [
   },
 ];
 
+const skillStagger = ['delay-0', 'delay-100', 'delay-200', 'delay-100', 'delay-200'];
+
 function SkillCategory({
   category,
   items,
   index,
+  visible,
 }: {
   category: (typeof categoryConfig)[0];
   items: string[];
   index: number;
+  visible: boolean;
 }) {
   const t = useTranslations('skills');
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-50px' });
   const Icon = category.icon;
 
   return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 25 }}
-      animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.55, delay: index * 0.1 }}
-      className="glass rounded-2xl p-6 border border-white/8 hover:border-white/15 transition-all duration-300"
+    <div
+      className={cn(
+        'glass rounded-2xl p-6 border border-white/8 hover:border-white/15 transition-all duration-300',
+        visible ? 'animate-fade-in-up' : 'opacity-0',
+        skillStagger[index] ?? ''
+      )}
     >
-      {/* Category header */}
       <div className="flex items-center gap-3 mb-5">
         <div className={`w-9 h-9 rounded-xl border flex items-center justify-center flex-shrink-0 ${category.color}`}>
           <Icon size={15} />
@@ -79,36 +81,31 @@ function SkillCategory({
         </h3>
       </div>
 
-      {/* Skill badges */}
       <div className="flex flex-wrap gap-2">
-        {items.map((skill, i) => (
-          <motion.span
+        {items.map((skill) => (
+          <span
             key={skill}
-            initial={{ opacity: 0, scale: 0.85 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.3, delay: index * 0.1 + i * 0.04 }}
             className={`text-sm px-3 py-1.5 rounded-lg border transition-all duration-200 cursor-default ${category.badgeColor}`}
           >
             {skill}
-          </motion.span>
+          </span>
         ))}
       </div>
-    </motion.div>
+    </div>
   );
 }
 
 export default function Skills() {
   const t = useTranslations('skills');
   const headerRef = useRef(null);
+  const gridRef = useRef(null);
   const isHeaderInView = useInView(headerRef, { once: true, margin: '-80px' });
+  const isGridInView = useInView(gridRef, { once: true, margin: '-50px' });
 
   const allSkillsCount = Object.values(skills).flat().length;
 
   return (
-    <section id="skills" className="relative py-24 px-4 sm:px-8 lg:px-16 xl:px-24 max-w-7xl mx-auto">
-      {/* Ambient */}
-      <div className="absolute top-1/2 right-0 w-[400px] h-[500px] bg-purple-500/4 rounded-full blur-[140px] pointer-events-none" />
-
+    <section id="skills" className="cv-auto relative py-24 px-4 sm:px-8 lg:px-16 xl:px-24 max-w-7xl mx-auto">
       {/* Header */}
       <motion.div
         ref={headerRef}
@@ -136,13 +133,14 @@ export default function Skills() {
       </motion.div>
 
       {/* Skills grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {categoryConfig.map((category, i) => (
           <SkillCategory
             key={category.key}
             category={category}
             items={skills[category.key]}
             index={i}
+            visible={isGridInView}
           />
         ))}
       </div>

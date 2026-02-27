@@ -23,9 +23,6 @@ export default function About() {
 
   return (
     <section id="about" className="relative py-24 px-4 sm:px-8 lg:px-16 xl:px-24 max-w-7xl mx-auto">
-      {/* Ambient glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-sunset-orange/5 rounded-full blur-[120px] pointer-events-none" />
-
       <div ref={triggerRef}>
         {/* Top row: label + toggle button */}
         <motion.div

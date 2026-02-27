@@ -10,7 +10,7 @@
   "hero": {
     "greeting": "Hola, soy",
     "name": "Owen Morales",
-    "roles": ["Ingeniero de Software", "Científico de Datos", "Desarrollador Full-Stack", "Ingeniero ML", "Solucionador de Problemas"],
+    "roles": ["Ingeniero de Software", "Científico de Datos", "Ingeniero ML"],
     "cta_projects": "Ver Mi Trabajo",
     "cta_resume": "Descargar Currículum",
     "scroll": "Desliza para explorar"
@@ -159,6 +159,6 @@
   "footer": {
     "tagline": "Construido con curiosidad. Desplegado con cuidado.",
     "copyright": "© {year} Owen Morales. Todos los derechos reservados.",
-    "made_with": "Hecho en Costa Rica 🌊"
+    "made_with": "Hecho en Costa Rica"
   }
 }

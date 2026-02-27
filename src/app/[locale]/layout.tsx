@@ -24,16 +24,23 @@ export const metadata: Metadata = {
   title: 'Owen Morales – DevHub',
   description: 'Software Engineer & Data Scientist from Costa Rica. Building products that matter.',
   keywords: ['Owen Morales', 'Software Engineer', 'Data Scientist', 'Full-Stack Developer', 'Costa Rica', 'Portfolio'],
+  icons: {
+    icon: '/favicon.svg',
+  },
   openGraph: {
     title: 'Owen Morales – DevHub',
-    description: 'Software Engineer & Data Scientist from Costa Rica.',
+    description: 'Software Engineer & Data Scientist from Costa Rica. Building products that matter.',
+    url: 'https://owenmorales.dev',
+    siteName: 'Owen Morales – DevHub',
     type: 'website',
-    images: [{ url: '/costarica-beach.jpg', width: 1200, height: 630, alt: 'Owen Morales Portfolio' }],
+    locale: 'en_US',
+    images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: 'Owen Morales – Software Engineer & Data Scientist' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Owen Morales – DevHub',
-    description: 'Software Engineer & Data Scientist from Costa Rica.',
+    description: 'Software Engineer & Data Scientist from Costa Rica. Building products that matter.',
+    images: ['/og-image.jpg'],
   },
 };
 
@@ -56,7 +63,7 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale} className="scroll-smooth">
+    <html lang={locale}>
       <body className={`${inter.variable} ${playfair.variable} font-sans bg-ocean-deep text-sand-warm antialiased`}>
         <NextIntlClientProvider messages={messages}>
           {children}

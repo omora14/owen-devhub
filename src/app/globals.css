@@ -8,7 +8,8 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth removed — causes main-thread jank on scroll.
+     Smooth scrolling for nav/CTA clicks is handled via JS scrollIntoView(). */
 }
 
 body {
@@ -52,11 +53,11 @@ body {
   }
 
   .glass {
-    @apply bg-white/5 backdrop-blur-md border border-white/10;
+    @apply bg-ocean-navy/60 border border-white/10;
   }
 
   .glass-dark {
-    @apply bg-ocean-deep/80 backdrop-blur-md border border-white/10;
+    @apply bg-ocean-deep/80 border border-white/10;
   }
 
   .card-hover {
@@ -70,6 +71,21 @@ body {
   .glow-orange {
     box-shadow: 0 0 40px rgba(232, 101, 10, 0.3), 0 0 80px rgba(232, 101, 10, 0.1);
   }
+}
+
+/* Skip rendering for offscreen sections */
+.cv-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
+}
+
+/* Navbar slide-in (CSS-only, no JS dependency) */
+@keyframes navIn {
+  from { transform: translateY(-80px); opacity: 0; }
+  to   { transform: translateY(0);     opacity: 1; }
+}
+.animate-nav-in {
+  animation: navIn 0.6s ease-out forwards;
 }
 
 /* Wave animation for hero */
@@ -109,6 +125,7 @@ body {
 }
 
 /* Stagger delays */
+.delay-0 { animation-delay: 0ms; }
 .delay-100 { animation-delay: 100ms; }
 .delay-200 { animation-delay: 200ms; }
 .delay-300 { animation-delay: 300ms; }

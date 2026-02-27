@@ -128,7 +128,7 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
       className="fixed inset-0 z-[100] flex items-end sm:items-center justify-center sm:p-4"
       onClick={onClose}
     >
-      <div className="absolute inset-0 bg-ocean-deep/90 backdrop-blur-lg" />
+      <div className="absolute inset-0 bg-ocean-deep/95" />
 
       {/* Mobile: slide up */}
       <motion.div
@@ -161,31 +161,31 @@ function ProjectModal({ project, onClose }: { project: Project; onClose: () => v
   );
 }
 
+const staggerDelay = ['delay-0', 'delay-100', 'delay-200', 'delay-100', 'delay-200', 'delay-300'];
+
 function ProjectCard({
   project,
   index,
   onClick,
+  visible,
 }: {
   project: Project;
   index: number;
   onClick: () => void;
+  visible: boolean;
 }) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-60px' });
   const color = categoryColors[project.subtitle] || 'from-sunset-orange/20 to-sunset-gold/20 border-sunset-orange/30';
 
   return (
-    <motion.button
-      ref={ref}
-      initial={{ opacity: 0, y: 30 }}
-      animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.5, delay: index * 0.07 }}
+    <button
       onClick={onClick}
       className={cn(
         'group relative w-full text-left glass rounded-2xl border overflow-hidden',
         'hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-sunset-orange/10',
         'transition-all duration-300 cursor-pointer',
-        project.highlight ? 'border-sunset-orange/25' : 'border-white/8 hover:border-sunset-orange/20'
+        project.highlight ? 'border-sunset-orange/25' : 'border-white/8 hover:border-sunset-orange/20',
+        visible ? 'animate-fade-in-up' : 'opacity-0',
+        staggerDelay[index] ?? ''
       )}
     >
       <div className={cn('h-1 w-full bg-gradient-to-r', color)} />
@@ -236,7 +236,7 @@ function ProjectCard({
           </span>
         </div>
       </div>
-    </motion.button>
+    </button>
   );
 }
 
@@ -246,7 +246,9 @@ export default function Projects() {
   const translatedItems = tRoot.raw('projectItems') as TranslatedProjectItem[];
   const [selected, setSelected] = useState<Project | null>(null);
   const headerRef = useRef(null);
+  const gridRef = useRef(null);
   const isHeaderInView = useInView(headerRef, { once: true, margin: '-80px' });
+  const isGridInView = useInView(gridRef, { once: true, margin: '-60px' });
 
   const projects: Project[] = projectsMeta.map((meta, i) => ({
     ...meta,
@@ -255,9 +257,7 @@ export default function Projects() {
   }));
 
   return (
-    <section id="projects" className="relative py-24 px-4 sm:px-8 lg:px-16 xl:px-24 max-w-7xl mx-auto">
-      <div className="absolute top-1/3 left-0 w-[500px] h-[400px] bg-sunset-gold/4 rounded-full blur-[140px] pointer-events-none" />
-
+    <section id="projects" className="cv-auto relative py-24 px-4 sm:px-8 lg:px-16 xl:px-24 max-w-7xl mx-auto">
       <motion.div
         ref={headerRef}
         initial={{ opacity: 0, y: 30 }}
@@ -277,13 +277,14 @@ export default function Projects() {
         </p>
       </motion.div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      <div ref={gridRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
         {projects.map((project, i) => (
           <ProjectCard
             key={project.id}
             project={project}
             index={i}
             onClick={() => setSelected(project)}
+            visible={isGridInView}
           />
         ))}
       </div>

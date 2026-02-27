@@ -67,10 +67,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="relative py-24 px-4 sm:px-8 lg:px-16 xl:px-24 max-w-7xl mx-auto">
-      {/* Ambient glow */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-sunset-orange/5 rounded-full blur-[130px] pointer-events-none" />
-
+    <section id="contact" className="cv-auto relative py-24 px-4 sm:px-8 lg:px-16 xl:px-24 max-w-7xl mx-auto">
       {/* Header */}
       <motion.div
         ref={headerRef}

@@ -21,6 +21,8 @@ type TranslatedItem = {
   bullets: string[];
 };
 
+const expStaggerDelay = ['delay-0', 'delay-100', 'delay-200', 'delay-300', 'delay-400', 'delay-500'];
+
 function ExperienceCard({
   title,
   company,
@@ -29,6 +31,7 @@ function ExperienceCard({
   bullets,
   index,
   isLast,
+  visible,
 }: {
   title: string;
   company: string;
@@ -37,18 +40,17 @@ function ExperienceCard({
   bullets: string[];
   index: number;
   isLast: boolean;
+  visible: boolean;
 }) {
   const [expanded, setExpanded] = useState(false);
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: '-60px' });
 
   return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, x: -30 }}
-      animate={isInView ? { opacity: 1, x: 0 } : {}}
-      transition={{ duration: 0.55, delay: index * 0.08 }}
-      className="relative flex gap-6"
+    <div
+      className={cn(
+        'relative flex gap-6',
+        visible ? 'animate-fade-in-up' : 'opacity-0',
+        expStaggerDelay[index] ?? ''
+      )}
     >
       {/* Timeline dot + line */}
       <div className="flex flex-col items-center flex-shrink-0">
@@ -82,13 +84,14 @@ function ExperienceCard({
                   <span className="text-xs text-sand-warm/40 font-mono">{period}</span>
                 </div>
               </div>
-              <motion.div
-                animate={{ rotate: expanded ? 180 : 0 }}
-                transition={{ duration: 0.25 }}
-                className="flex-shrink-0 mt-1 text-sand-warm/40 group-hover:text-sunset-orange transition-colors"
+              <div
+                className={cn(
+                  'flex-shrink-0 mt-1 text-sand-warm/40 group-hover:text-sunset-orange transition-all duration-250',
+                  expanded && 'rotate-180'
+                )}
               >
                 <ChevronDown size={16} />
-              </motion.div>
+              </div>
             </div>
 
             {/* Tags */}
@@ -105,24 +108,19 @@ function ExperienceCard({
 
             {/* Expanded bullets */}
             {expanded && (
-              <motion.ul
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, delay: 0.05 }}
-                className="mt-4 space-y-2 border-t border-white/8 pt-4"
-              >
+              <ul className="mt-4 space-y-2 border-t border-white/8 pt-4 animate-fade-in-up">
                 {bullets.map((bullet, i) => (
                   <li key={i} className="flex gap-2.5 text-sm text-sand-warm/70 leading-relaxed">
                     <span className="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-sunset-orange/70" />
                     {bullet}
                   </li>
                 ))}
-              </motion.ul>
+              </ul>
             )}
           </div>
         </button>
       </div>
-    </motion.div>
+    </div>
   );
 }
 
@@ -131,13 +129,12 @@ export default function Experience() {
   const tRoot = useTranslations();
   const items = tRoot.raw('experienceItems') as TranslatedItem[];
   const headerRef = useRef(null);
+  const timelineRef = useRef(null);
   const isHeaderInView = useInView(headerRef, { once: true, margin: '-80px' });
+  const isTimelineInView = useInView(timelineRef, { once: true, margin: '-60px' });
 
   return (
-    <section id="experience" className="relative py-24 px-4 sm:px-8 lg:px-16 xl:px-24 max-w-7xl mx-auto">
-      {/* Ambient glow */}
-      <div className="absolute top-1/2 right-0 w-[400px] h-[400px] bg-sunset-orange/4 rounded-full blur-[120px] pointer-events-none" />
-
+    <section id="experience" className="cv-auto relative py-24 px-4 sm:px-8 lg:px-16 xl:px-24 max-w-7xl mx-auto">
       {/* Header */}
       <motion.div
         ref={headerRef}
@@ -159,7 +156,7 @@ export default function Experience() {
       </motion.div>
 
       {/* Timeline */}
-      <div className="max-w-3xl">
+      <div ref={timelineRef} className="max-w-3xl">
         {experienceMeta.map((meta, i) => {
           const text = items[i] ?? { title: '', company: '', bullets: [] };
           return (
@@ -172,6 +169,7 @@ export default function Experience() {
               bullets={text.bullets}
               index={i}
               isLast={i === experienceMeta.length - 1}
+              visible={isTimelineInView}
             />
           );
         })}

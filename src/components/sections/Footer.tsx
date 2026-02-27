@@ -1,7 +1,6 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { motion } from 'framer-motion';
 import { Download, ExternalLink } from 'lucide-react';
 
 export default function Footer() {
@@ -9,7 +8,7 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative border-t border-white/8 bg-ocean-deep">
+    <footer className="cv-auto relative border-t border-white/8 bg-ocean-deep">
       {/* Top glow line */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-px bg-gradient-to-r from-transparent via-sunset-orange/50 to-transparent" />
 

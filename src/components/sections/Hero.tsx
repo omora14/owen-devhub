@@ -32,7 +32,7 @@ function Typewriter({ words }: { words: string[] }) {
   }, [charIdx, deleting, wordIdx, words]);
 
   return (
-    <span className="text-gradient font-sans font-semibold">
+    <span className="font-sans font-semibold text-sunset-flame">
       {displayed}
       <span className="cursor-blink text-sunset-orange ml-0.5">|</span>
     </span>
@@ -52,6 +52,7 @@ export default function Hero() {
 
     let animId: number;
     let t = 0;
+    let scrollTimeout: ReturnType<typeof setTimeout>;
 
     const resize = () => {
       canvas.width = window.innerWidth;
@@ -84,10 +85,23 @@ export default function Hero() {
       animId = requestAnimationFrame(draw);
     };
 
+    const onScroll = () => {
+      cancelAnimationFrame(animId);
+      clearTimeout(scrollTimeout);
+      if (window.scrollY < window.innerHeight) {
+        scrollTimeout = setTimeout(() => {
+          animId = requestAnimationFrame(draw);
+        }, 150);
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+
     draw();
     return () => {
       cancelAnimationFrame(animId);
+      clearTimeout(scrollTimeout);
       window.removeEventListener('resize', resize);
+      window.removeEventListener('scroll', onScroll);
     };
   }, []);
 
@@ -104,11 +118,11 @@ export default function Hero() {
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/costarica-beach.jpg"
+          src="/costarica-beach.webp"
           alt="Costa Rica Pacific Sunset"
           fill
           priority
-          quality={90}
+          quality={75}
           className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ocean-deep/40 via-ocean-deep/55 to-ocean-deep/98" />
@@ -119,6 +133,7 @@ export default function Hero() {
       <canvas
         ref={canvasRef}
         className="absolute inset-0 z-10 pointer-events-none"
+        style={{ willChange: 'transform' }}
       />
 
       {/* Content */}
