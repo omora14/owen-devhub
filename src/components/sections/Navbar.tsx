@@ -78,8 +78,20 @@ export default function Navbar() {
             onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
             className="flex items-center gap-2 group"
           >
-            <span className="text-xl font-display font-bold text-sunset-orange">Owen</span>
-            <span className="text-sm font-mono text-sand-warm/70 group-hover:text-sunset-orange transition-colors duration-200">
+            <span
+              className={cn(
+                'text-xl font-display font-bold transition-colors duration-200',
+                scrolled ? 'text-sunset-orange' : 'text-sand-warm'
+              )}
+            >
+              Owen
+            </span>
+            <span
+              className={cn(
+                'text-sm font-mono group-hover:text-sunset-orange transition-colors duration-200',
+                scrolled ? 'text-sand-warm/70' : 'text-sand-warm/90'
+              )}
+            >
               — DevHub
             </span>
           </button>
@@ -127,7 +139,12 @@ export default function Navbar() {
             <a
               href="/Owen-Morales-Resume.pdf"
               download
-              className="hidden md:flex items-center gap-2 px-4 py-1.5 rounded-lg bg-sunset-orange/15 border border-sunset-orange/40 text-sunset-orange text-sm font-medium hover:bg-sunset-orange hover:text-white transition-all duration-200"
+              className={cn(
+                'hidden md:flex items-center gap-2 px-4 py-1.5 rounded-lg text-sm font-medium transition-all duration-200',
+                scrolled
+                  ? 'bg-sunset-orange/15 border border-sunset-orange/40 text-sunset-orange hover:bg-sunset-orange hover:text-white'
+                  : 'bg-ocean-deep/70 border border-white/20 text-sand-warm hover:bg-ocean-deep/90 hover:border-white/30'
+              )}
             >
               {t('resume')}
             </a>

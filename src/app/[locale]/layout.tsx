@@ -20,7 +20,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://owenmorales.dev'),
+  metadataBase: new URL('https://owmora.com'),
   title: 'Owen Morales – DevHub',
   description: 'Software Engineer & Data Scientist from Costa Rica. Building products that matter.',
   keywords: ['Owen Morales', 'Software Engineer', 'Data Scientist', 'Full-Stack Developer', 'Costa Rica', 'Portfolio'],
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Owen Morales – DevHub',
     description: 'Software Engineer & Data Scientist from Costa Rica. Building products that matter.',
-    url: 'https://owenmorales.dev',
+    url: 'https://owmora.com',
     siteName: 'Owen Morales – DevHub',
     type: 'website',
     locale: 'en_US',

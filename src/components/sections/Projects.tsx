@@ -2,8 +2,8 @@
 
 import { useRef, useState } from 'react';
 import { useTranslations } from 'next-intl';
-import { motion, AnimatePresence, useInView } from 'framer-motion';
-import { ExternalLink, X, Github, Tag, ChevronRight, FolderCode } from 'lucide-react';
+import { motion, useInView } from 'framer-motion';
+import { ExternalLink, Github, Tag, ChevronRight, FolderCode } from 'lucide-react';
 import { projectsMeta } from '@/lib/data';
 import { cn } from '@/lib/utils';
 
@@ -35,150 +35,27 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
     </span>
   );
 }
-
-type TFunc = ReturnType<typeof useTranslations>;
-
-function ModalContent({
-  project,
-  onClose,
-  t,
-}: {
-  project: Project;
-  onClose: () => void;
-  t: TFunc;
-  color: string;
-}) {
-  return (
-    <div className="p-5 sm:p-8">
-      <button
-        onClick={onClose}
-        className="absolute top-4 right-4 sm:top-5 sm:right-5 p-2 rounded-xl text-sand-warm/50 hover:text-sand-warm hover:bg-white/8 transition-all"
-      >
-        <X size={18} />
-      </button>
-
-      <div className="pr-10">
-        <span className="text-xs font-mono text-sunset-orange/70 tracking-wider">{project.subtitle}</span>
-        <h3 className="mt-1 text-xl sm:text-3xl font-display font-bold text-sand-warm leading-tight">{project.title}</h3>
-        <p className="mt-1.5 text-sm text-sand-warm/40 font-mono">{project.date}</p>
-      </div>
-
-      <p className="mt-4 text-sm sm:text-base text-sand-warm/75 leading-relaxed">{project.longDescription}</p>
-
-      <div className="mt-5">
-        <h4 className="text-xs font-mono uppercase tracking-widest text-sunset-orange/70 mb-3 flex items-center gap-2">
-          <ChevronRight size={12} /> {t('highlights_label')}
-        </h4>
-        <div className="grid grid-cols-2 gap-2">
-          {project.metrics.map((m) => (
-            <div key={m} className="glass rounded-xl px-3 py-2.5 border border-white/8">
-              <span className="text-xs sm:text-sm text-sand-warm/80">{m}</span>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <div className="mt-5">
-        <h4 className="text-xs font-mono uppercase tracking-widest text-sunset-orange/70 mb-3 flex items-center gap-2">
-          <Tag size={12} /> {t('tech_label')}
-        </h4>
-        <div className="flex flex-wrap gap-1.5">
-          {project.tags.map((tag) => (
-            <span
-              key={tag}
-              className="text-xs px-2.5 py-1 rounded-full bg-ocean-mid border border-white/10 text-sand-warm/70"
-            >
-              {tag}
-            </span>
-          ))}
-        </div>
-      </div>
-
-      <div className="mt-6 pb-2 flex items-center gap-3">
-        <a
-          href={project.github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-sunset-orange/15 border border-sunset-orange/40 text-sunset-orange text-sm font-medium hover:bg-sunset-orange hover:text-white transition-all duration-200"
-        >
-          <Github size={14} />
-          {t('view_github')}
-          <ExternalLink size={11} />
-        </a>
-        <button
-          onClick={onClose}
-          className="px-4 py-2.5 rounded-xl border border-white/15 text-sand-warm/60 text-sm font-medium hover:border-white/30 hover:text-sand-warm transition-all duration-200"
-        >
-          {t('close')}
-        </button>
-      </div>
-    </div>
-  );
-}
-
-function ProjectModal({ project, onClose }: { project: Project; onClose: () => void }) {
-  const t = useTranslations('projects');
-  const color = categoryColors[project.subtitle] || 'from-sunset-orange/20 to-sunset-gold/20 border-sunset-orange/30';
-
-  return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="fixed inset-0 z-[100] flex items-end sm:items-center justify-center sm:p-4"
-      onClick={onClose}
-    >
-      <div className="absolute inset-0 bg-ocean-deep/95" />
-
-      {/* Mobile: slide up */}
-      <motion.div
-        initial={{ y: '100%', opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        exit={{ y: '100%', opacity: 0 }}
-        transition={{ type: 'spring', bounce: 0.15, duration: 0.5 }}
-        className="relative z-10 w-full sm:hidden max-h-[92vh] overflow-y-auto bg-ocean-navy border border-white/10 rounded-t-3xl shadow-2xl shadow-black/60"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <div className="flex justify-center pt-3 pb-1">
-          <div className="w-10 h-1 rounded-full bg-white/20" />
-        </div>
-        <ModalContent project={project} onClose={onClose} t={t} color={color} />
-      </motion.div>
-
-      {/* Desktop: centered */}
-      <motion.div
-        initial={{ scale: 0.88, opacity: 0, y: 30 }}
-        animate={{ scale: 1, opacity: 1, y: 0 }}
-        exit={{ scale: 0.88, opacity: 0, y: 30 }}
-        transition={{ type: 'spring', bounce: 0.2, duration: 0.55 }}
-        className="relative z-10 hidden sm:block w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-ocean-navy/95 border border-white/15 rounded-3xl shadow-2xl shadow-black/60"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <div className={cn('h-1.5 w-full rounded-t-3xl bg-gradient-to-r', color.split(' ')[0], 'via-sunset-orange/60', color.split(' ')[1])} />
-        <ModalContent project={project} onClose={onClose} t={t} color={color} />
-      </motion.div>
-    </motion.div>
-  );
-}
-
 const staggerDelay = ['delay-0', 'delay-100', 'delay-200', 'delay-100', 'delay-200', 'delay-300'];
 
 function ProjectCard({
   project,
   index,
-  onClick,
   visible,
+  expanded,
+  onToggle,
 }: {
   project: Project;
   index: number;
-  onClick: () => void;
   visible: boolean;
+  expanded: boolean;
+  onToggle: () => void;
 }) {
+  const t = useTranslations('projects');
   const color = categoryColors[project.subtitle] || 'from-sunset-orange/20 to-sunset-gold/20 border-sunset-orange/30';
 
   return (
     <button
-      onClick={onClick}
+      onClick={onToggle}
       className={cn(
         'group relative w-full text-left glass rounded-2xl border overflow-hidden',
         'hover:-translate-y-1.5 hover:shadow-2xl hover:shadow-sunset-orange/10',
@@ -232,9 +109,63 @@ function ProjectCard({
         <div className="flex items-center justify-between mt-4 pt-4 border-t border-white/8">
           <span className="text-xs font-mono text-sand-warm/35">{project.date}</span>
           <span className="text-xs text-sunset-orange/70 group-hover:text-sunset-orange flex items-center gap-1 transition-colors">
-            Explore <ChevronRight size={11} className="group-hover:translate-x-0.5 transition-transform" />
+            {expanded ? t('close') : t('view_github')}
+            <ChevronRight size={11} className={cn('transition-transform', expanded && 'group-hover:translate-x-0.5')} />
           </span>
         </div>
+
+        {expanded && (
+          <div className="mt-4 space-y-5">
+            <p className="text-sm text-sand-warm/75 leading-relaxed">{project.longDescription}</p>
+
+            {project.metrics.length > 0 && (
+              <div>
+                <h4 className="text-xs font-mono uppercase tracking-widest text-sunset-orange/70 mb-3 flex items-center gap-2">
+                  <ChevronRight size={12} /> {t('highlights_label')}
+                </h4>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                  {project.metrics.map((m) => (
+                    <div key={m} className="glass rounded-xl px-3 py-2.5 border border-white/8">
+                      <span className="text-xs sm:text-sm text-sand-warm/80">{m}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            <div>
+              <h4 className="text-xs font-mono uppercase tracking-widest text-sunset-orange/70 mb-3 flex items-center gap-2">
+                <Tag size={12} /> {t('tech_label')}
+              </h4>
+              <div className="flex flex-wrap gap-1.5">
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-xs px-2.5 py-1 rounded-full bg-ocean-mid border border-white/10 text-sand-warm/70"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="pt-1 flex items-center gap-3">
+              {project.github && (
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-sunset-orange/15 border border-sunset-orange/40 text-sunset-orange text-sm font-medium hover:bg-sunset-orange hover:text-white transition-all duration-200"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <Github size={14} />
+                  {t('view_github')}
+                  <ExternalLink size={11} />
+                </a>
+              )}
+            </div>
+          </div>
+        )}
       </div>
     </button>
   );
@@ -244,7 +175,7 @@ export default function Projects() {
   const t = useTranslations('projects');
   const tRoot = useTranslations();
   const translatedItems = tRoot.raw('projectItems') as TranslatedProjectItem[];
-  const [selected, setSelected] = useState<Project | null>(null);
+  const [expandedId, setExpandedId] = useState<string | null>(null);
   const headerRef = useRef(null);
   const gridRef = useRef(null);
   const isHeaderInView = useInView(headerRef, { once: true, margin: '-80px' });
@@ -283,17 +214,14 @@ export default function Projects() {
             key={project.id}
             project={project}
             index={i}
-            onClick={() => setSelected(project)}
             visible={isGridInView}
+            expanded={expandedId === project.id}
+            onToggle={() =>
+              setExpandedId((current) => (current === project.id ? null : project.id))
+            }
           />
         ))}
       </div>
-
-      <AnimatePresence>
-        {selected && (
-          <ProjectModal project={selected} onClose={() => setSelected(null)} />
-        )}
-      </AnimatePresence>
     </section>
   );
 }
