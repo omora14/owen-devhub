@@ -11,7 +11,6 @@ const navLinks = [
   { key: 'about', href: '#about' },
   { key: 'experience', href: '#experience' },
   { key: 'projects', href: '#projects' },
-  { key: 'skills', href: '#skills' },
   { key: 'contact', href: '#contact' },
 ];
 
@@ -32,7 +31,7 @@ export default function Navbar() {
       ticking = true;
       requestAnimationFrame(() => {
         setScrolled(window.scrollY > 30);
-        const sections = ['about', 'experience', 'projects', 'skills', 'contact'];
+        const sections = ['about', 'experience', 'projects', 'contact'];
         const current = sections.find((id) => {
           const el = document.getElementById(id);
           if (!el) return false;
@@ -92,7 +91,7 @@ export default function Navbar() {
                 scrolled ? 'text-sand-warm/70' : 'text-sand-warm/90'
               )}
             >
-              — DevHub
+              - DevHub
             </span>
           </button>
 
@@ -135,7 +134,7 @@ export default function Navbar() {
               </span>
             </button>
 
-            {/* Resume button — desktop */}
+            {/* Resume button (desktop) */}
             <a
               href="/Owen-Morales-Resume.pdf"
               download

@@ -3,7 +3,6 @@
     "about": "About",
     "experience": "Experience",
     "projects": "Projects",
-    "skills": "Skills",
     "contact": "Contact",
     "resume": "Resume"
   },
@@ -21,9 +20,9 @@
     "toggle_show": "Learn my story",
     "toggle_hide": "Hide story",
     "title": "From the shores of Costa Rica to the frontier of software.",
-    "p1": "I grew up on the Pacific coast of Costa Rica — a place that shaped my roots and gave me a deep love for this world. From early on, technology fascinated me. Before coming to the US, I dedicated two years of my life serving a mission — helping people, learning to listen, and growing in ways I never expected. My family has been the foundation of everything: they've supported, pushed, and believed in me to become not just what I want to be, but what I've always dreamed of.",
+    "p1": "I grew up on the Pacific coast of Costa Rica, a place that shaped my roots and gave me a deep love for this world. From early on, technology fascinated me. Before coming to the US, I dedicated two years of my life serving a mission, helping people, learning to listen, and growing in ways I never expected. My family has been the foundation of everything: they've supported, pushed, and believed in me to become not just what I want to be, but what I've always dreamed of.",
     "p2": "That journey brought me to the United States, where I'm pursuing Computer Science at BYU-Idaho while I earned an Associate's in Business Statistics at BYU. I've maintained a 3.98 GPA not because I'm chasing numbers, but because I genuinely love learning.",
-    "p3": "Over the past few years I've gone from writing automation scripts at Verizon, to engineering integrations at BYU that save over $110K annually, to helping millions of FamilySearch users with reliable software — and co-founding Daily Disciple, an app that grew 87% month-over-month. Data science and AI are woven into everything I build: I believe the best engineers understand both the system and the story behind the data.",
+    "p3": "Over the past few years I've gone from writing automation scripts at Verizon, to engineering integrations at BYU that save over $110K annually, to helping millions of FamilySearch users with reliable software, and co-founding Impulsa, a platform that scaled to tens of thousands of users. Data science and AI are woven into everything I build: I believe the best engineers understand both the system and the story behind the data.",
     "p4": "When I'm not writing code, you'll find me on Rainbow Six, or spending time with the people I love most. I believe in shipping fast, learning faster, and never losing sight of what matters.",
     "photo_alt": "Owen Morales"
   },
@@ -34,65 +33,68 @@
   },
   "experienceItems": [
     {
-      "title": "CS Teaching Assistant",
-      "company": "Brigham Young University – Idaho",
+      "title": "Software Developer",
+      "company": "BYU",
       "bullets": [
-        "Validated cloud-native architectures utilizing AWS, Docker, and Kubernetes, enforcing 100% compliance with industry standards in serverless scaling, NoSQL database design, and event-driven systems.",
-        "Mentored 100+ students in HTML/CSS/JS, boosting multi-level instructional strategies.",
-        "Guided CI/CD and IaC, streamlining workflows and incident response protocols for 1,000+ assignments."
+        "Architected a data-patching workflow integrating Genesys, iPaaS, and JavaScript to append metadata to 2,000+ daily tickets, performing complex data analysis using Python to enable linear regression modeling.",
+        "Delivered 350+ system integrations and revamped 30+ Power BI reports across 15+ departments, helping 100,000+ users and driving data-informed decisions that saved $110K+ annually.",
+        "Designed and implemented an AI-driven system that extracts Knowledge Base articles into Markdown, optimizing data ingestion for LLM integration to securely manage 5,000+ weekly interactions with high accuracy.",
+        "Consolidated a modular CSAT platform via TypeScript, condensing 21 disparate flows into one unified interface.",
+        "Accelerated survey delivery speeds by 93% by re-engineering and streamlining complex backend workflows."
       ]
     },
     {
-      "title": "Co-Founder & Developer",
-      "company": "Daily Disciple",
+      "title": "Co-Founder",
+      "company": "Impulsa",
       "bullets": [
-        "Co-founded an app on React, Expo, and Node.js, successfully launching to thousands of active users.",
-        "Designed the platform to help users plan and track spiritual and daily goals, achieving 87% monthly growth.",
-        "Implemented real-time tracking features, raising task completion by 76% and decreasing churn by 32%."
+        "Founded and scaled a comprehensive productivity platform to 18,000+ active users, securing strategic partnerships with Toyota, Microsoft, Google, and Instituto Joule to modernize enterprise workflows.",
+        "Pitched comprehensive business models to stakeholders to secure capital funding, subsequently hiring a dedicated engineering team to drive a rapid Spanish-market expansion and accelerate global user acquisition.",
+        "Developed the core infrastructure using React, Expo, and Node.js, engineering robust real-time tracking features that successfully surged task completion by 76% and mitigated user churn by 32%."
+      ]
+    },
+    {
+      "title": "CS Teaching Assistant",
+      "company": "Brigham Young University - Idaho",
+      "bullets": [
+        "Validated cloud-native AWS, Docker, and Kubernetes architectures, enforcing strict serverless scaling compliance, optimizing resource allocation, and establishing industry-standard deployment practices across complex software.",
+        "Instructed 100+ students in advanced HTML, CSS, and JavaScript principles, leveraging multi-level interactive teaching strategies to maximize overall coding proficiency, frontend performance, and core understanding.",
+        "Facilitated CI/CD and IaC best practices, streamlining submission workflows for over 1,000 automated assignments."
       ]
     },
     {
       "title": "Software Engineer",
       "company": "FamilySearch",
       "bullets": [
-        "Executed 350+ test cases in C# (NUnit) and Azure Functions, ensuring reliability for 13.7M users.",
-        "Built a feature from concept to deployment, adjusting coverage to 97% and eliminating manual testing.",
-        "Refactored 10,000+ lines of code, elevating performance by 36% through test suites in Azure."
-      ]
-    },
-    {
-      "title": "Software Developer",
-      "company": "Brigham Young University",
-      "bullets": [
-        "Architected BYU's CSAT platform on Genesys, Twilio API, and iPaaS, enabling automated feedback for 70,000+ people.",
-        "Digitized Financial Aid via JavaScript, iPaaS, and TDX API, saving $110K+ annually for 100K+ users.",
-        "Engineered an automated TypeScript parsing system that powers 5,000+ monthly AI assistant interactions."
+        "Orchestrated 100+ automated releases via C# and Azure Functions as the primary QA engineer to ensure rigorous platform reliability, mitigating deployment risks and achieving zero critical downtime for 13.7M global end-users.",
+        "Transitioned manual testing protocols to fully automated, end-to-end continuous integration pipelines across C#, Java, and Python architectures, successfully expanding overall test coverage to 97% while eliminating bottlenecks.",
+        "Refactored 10,000+ lines of legacy code, boosting system performance by 36% via optimized Azure test suites."
       ]
     },
     {
       "title": "Researcher",
       "company": "CCS Global Tech",
       "bullets": [
-        "Optimized data pipelines in R, SQL, Snowflake, and Python, incorporating 87% of predictive analytics.",
-        "Redesigned CRM workflows consolidating UI/UX architecture, raising staff productivity by 34% across 5,000+ client records.",
-        "Mentored 20+ engineers on data and analytics best practices."
+        "Optimized complex enterprise data pipelines utilizing R, SQL, Snowflake, and Python, effectively integrating 87% of required predictive analytics models to drive data-informed decision-making and accelerate strategic initiatives.",
+        "Revamped CRM UI/UX architectures to increase staff productivity by 34% across 5,000+ client records through heavily enhanced data accessibility, intuitive dashboard visualizations, and streamlined navigation protocols."
       ]
     },
     {
-      "title": "Technician",
+      "title": "IT Tier 3 Technician",
       "company": "Verizon",
       "bullets": [
-        "Programmed a C#/ASP.NET tool for JIRA, increasing team output by 78% and streamlining workflow projects.",
-        "Linked MTAS/MSAT and Salesforce workflows, producing $148K in annual savings as technical lead.",
-        "Simplified internal processes for Visible, increasing team efficiency and delivery consistency."
+        "Directed Tier 3 IT operations for Verizon's Visible division as the top-performing technical lead, managing a cross-functional team to simplify internal operational delivery and elevate resolution metrics.",
+        "Programmed a custom C#/ASP.NET integration tool for JIRA, amplifying internal team output by 78% and drastically reducing overall project turnaround times by 34% across regional deployments.",
+        "Fortified core security architectures and linked MTAS/MSAT with Salesforce, generating $148K in annual savings."
       ]
     }
   ],
   "projects": {
     "title": "Projects",
-    "subtitle": "Things I've built — from AI-powered apps to systems-level tools.",
+    "subtitle": "Things I've built, from AI-powered apps to systems-level tools.",
     "view_github": "View on GitHub",
+    "details": "View details",
     "close": "Close",
+    "private_notice": "This project is private or maintained under another organization.",
     "tech_label": "Tech Stack",
     "highlights_label": "Highlights"
   },
@@ -113,6 +115,11 @@
       "metrics": ["$11K in savings identified", "80+ workshop participants", "7 workshops led", "Predictive modeling applied"]
     },
     {
+      "description": "A collaborative roommate chore tracker built with Expo and Firebase for shared task ownership.",
+      "longDescription": "RoomiesChore is a collaborative mobile app built with React Native, Expo, and TypeScript that helps roommates create groups, assign chores, and track shared responsibilities. It includes Firebase authentication, Firestore real-time sync, due dates, priorities, and a cross-platform dashboard for iOS, Android, and web.",
+      "metrics": ["105+ commits", "Real-time Firestore sync", "Cross-platform mobile/web", "Group task assignment"]
+    },
+    {
       "description": "An interactive global map that visualizes emotions from social posts and text messages in real time.",
       "longDescription": "A real-time data visualization platform built in Go that aggregates emotional sentiment from social posts and text messages and renders them on a live, interactive global map. Emotisphere transforms raw text data into geographic emotional insights, providing a unique lens on the world's collective mood.",
       "metrics": ["Real-time sentiment mapping", "Global geographic visualization", "Social data aggregation", "Go backend"]
@@ -123,22 +130,16 @@
       "metrics": ["88% reduction in manual processing", "Double data precision", "5,000+ monthly AI interactions", "Real-time schedule activation"]
     },
     {
+      "description": "A 2D Godot game focused on movement, coins, platforms, and clean gameplay loops.",
+      "longDescription": "Stardew Like is a 2D platformer built in Godot where players move through levels, collect coins, avoid killzones, and use moving platforms to complete objectives. The project includes pixel-art visuals, sound effects, and a clear gameplay loop, and serves as a focused game development project in GDScript.",
+      "metrics": ["Godot 4.5+", "GDScript gameplay systems", "Pixel-art platformer", "Level mechanics + hazards"]
+    },
+    {
       "description": "Do sentiments matter in the current financial world? A Python-powered analysis of crypto market sentiment vs. price.",
       "longDescription": "A data science project exploring the relationship between social sentiment and cryptocurrency market performance. Using Python and NLP techniques, the project analyzes whether public sentiment on social media platforms has a statistically significant correlation with price movements in crypto markets.",
       "metrics": ["Sentiment vs. price correlation", "Python NLP pipeline", "Market data analysis", "Statistical modeling"]
     }
   ],
-  "skills": {
-    "title": "Skills",
-    "subtitle": "The tools I reach for and the ones I've mastered.",
-    "categories": {
-      "languages": "Languages",
-      "frontend": "Frontend",
-      "backend": "Backend & Cloud",
-      "data": "Data & ML",
-      "tools": "Tools & DevOps"
-    }
-  },
   "contact": {
     "title": "Let's Build Something",
     "subtitle": "Have a project, an idea, or just want to connect? I'd love to hear from you.",

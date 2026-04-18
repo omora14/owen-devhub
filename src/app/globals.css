@@ -8,7 +8,7 @@
 }
 
 html {
-  /* scroll-behavior: smooth removed — causes main-thread jank on scroll.
+  /* scroll-behavior: smooth removed: causes main-thread jank on scroll.
      Smooth scrolling for nav/CTA clicks is handled via JS scrollIntoView(). */
 }
 

@@ -6,7 +6,6 @@ import About from '@/components/sections/About';
 
 const Experience = dynamic(() => import('@/components/sections/Experience'));
 const Projects = dynamic(() => import('@/components/sections/Projects'));
-const Skills = dynamic(() => import('@/components/sections/Skills'));
 const Contact = dynamic(() => import('@/components/sections/Contact'));
 const Footer = dynamic(() => import('@/components/sections/Footer'));
 
@@ -26,7 +25,6 @@ export default function HomePage({ params: { locale } }: { params: { locale: str
       <About />
       <Experience />
       <Projects />
-      <Skills />
       <Contact />
       <Footer />
     </main>

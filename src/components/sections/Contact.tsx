@@ -205,7 +205,7 @@ export default function Contact() {
             </div>
             <h3 className="text-base font-semibold text-sand-warm mb-2">Fast responses</h3>
             <p className="text-sm text-sand-warm/55 leading-relaxed">
-              I typically respond within 24 hours. Don&apos;t hesitate to reach out — I&apos;m always open to discussing new projects, ideas, or opportunities.
+              I typically respond within 24 hours. Don&apos;t hesitate to reach out; I&apos;m always open to discussing new projects, ideas, or opportunities.
             </p>
           </div>
 

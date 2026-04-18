@@ -134,7 +134,7 @@ export default function Experience() {
   const isTimelineInView = useInView(timelineRef, { once: true, margin: '-60px' });
 
   return (
-    <section id="experience" className="cv-auto relative py-24 px-4 sm:px-8 lg:px-16 xl:px-24 max-w-7xl mx-auto">
+    <section id="experience" className="cv-auto relative pt-10 pb-24 px-4 sm:px-8 lg:px-16 xl:px-24 max-w-7xl mx-auto">
       {/* Header */}
       <motion.div
         ref={headerRef}
@@ -161,7 +161,7 @@ export default function Experience() {
           const text = items[i] ?? { title: '', company: '', bullets: [] };
           return (
             <ExperienceCard
-              key={meta.period + i}
+              key={`exp-${i}-${text.title}`}
               title={text.title}
               company={text.company}
               period={meta.period}

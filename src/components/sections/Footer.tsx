@@ -19,7 +19,7 @@ export default function Footer() {
             <div className="text-2xl font-display font-bold text-gradient mb-2">
               Owen Morales
             </div>
-            <div className="text-sm font-mono text-sand-warm/40 mb-4">— DevHub</div>
+            <div className="text-sm font-mono text-sand-warm/40 mb-4">- DevHub</div>
             <p className="text-sm text-sand-warm/50 leading-relaxed max-w-xs">
               {t('tagline')}
             </p>
@@ -33,7 +33,6 @@ export default function Footer() {
                 { label: 'About', href: '#about' },
                 { label: 'Experience', href: '#experience' },
                 { label: 'Projects', href: '#projects' },
-                { label: 'Skills', href: '#skills' },
                 { label: 'Contact', href: '#contact' },
               ].map(({ label, href }) => (
                 <button

@@ -3,7 +3,6 @@
     "about": "Sobre mí",
     "experience": "Experiencia",
     "projects": "Proyectos",
-    "skills": "Habilidades",
     "contact": "Contacto",
     "resume": "Currículum"
   },
@@ -21,9 +20,9 @@
     "toggle_show": "Conoce mi historia",
     "toggle_hide": "Ocultar historia",
     "title": "Desde las costas de Costa Rica hasta la frontera del software.",
-    "p1": "Crecí en la costa del Pacífico de Costa Rica — un lugar que formó mis raíces y me dio un amor profundo por este mundo. Desde pequeño, la tecnología me fascinó. Antes de venir a los Estados Unidos, dediqué dos años de mi vida sirviendo una misión — ayudando a personas, aprendiendo a escuchar, y creciendo de maneras que nunca imaginé. Mi familia ha sido el pilar de todo: me han apoyado, impulsado y creído en mí para convertirme no solo en lo que quiero ser, sino en lo que siempre soñé.",
+    "p1": "Crecí en la costa del Pacífico de Costa Rica, un lugar que formó mis raíces y me dio un amor profundo por este mundo. Desde pequeño, la tecnología me fascinó. Antes de venir a los Estados Unidos, dediqué dos años de mi vida sirviendo una misión, ayudando a personas, aprendiendo a escuchar, y creciendo de maneras que nunca imaginé. Mi familia ha sido el pilar de todo: me han apoyado, impulsado y creído en mí para convertirme no solo en lo que quiero ser, sino en lo que siempre soñé.",
     "p2": "Ese camino me trajo a los Estados Unidos, donde estudio Ciencias de la Computación en BYU-Idaho mientras obtuve un Asociado en Estadística de Negocios en BYU. Mantengo un GPA de 3.98 no porque persiga números, sino porque genuinamente me apasiona aprender.",
-    "p3": "En los últimos años he pasado de escribir scripts de automatización en Verizon, a diseñar integraciones en BYU que ahorran más de $110K anuales, a ayudar a millones de usuarios de FamilySearch con software confiable — y co-fundé Daily Disciple, una app que creció un 87% mes a mes. La ciencia de datos y la IA están entretejidas en todo lo que construyo: creo que los mejores ingenieros entienden tanto el sistema como la historia detrás de los datos.",
+    "p3": "En los últimos años he pasado de escribir scripts de automatización en Verizon, a diseñar integraciones en BYU que ahorran más de $110K anuales, a ayudar a millones de usuarios de FamilySearch con software confiable, y co-fundé Impulsa, una plataforma que escaló a decenas de miles de usuarios. La ciencia de datos y la IA están entretejidas en todo lo que construyo: creo que los mejores ingenieros entienden tanto el sistema como la historia detrás de los datos.",
     "p4": "Cuando no estoy escribiendo código, me encuentras en Rainbow Six, o pasando tiempo con las personas que más amo. Creo en lanzar rápido, aprender más rápido, y nunca perder de vista lo que importa.",
     "photo_alt": "Owen Morales"
   },
@@ -34,65 +33,68 @@
   },
   "experienceItems": [
     {
-      "title": "Asistente de Docencia en Ciencias de la Computación",
-      "company": "Brigham Young University – Idaho",
+      "title": "Desarrollador de Software",
+      "company": "BYU",
       "bullets": [
-        "Validé arquitecturas nativas en la nube con AWS, Docker y Kubernetes, garantizando 100% de cumplimiento con estándares de escalado serverless, diseño NoSQL y sistemas orientados a eventos.",
-        "Mentoré a más de 100 estudiantes en HTML/CSS/JS, potenciando estrategias de instrucción multinivel.",
-        "Guié CI/CD e IaC, optimizando flujos de trabajo y protocolos de respuesta para más de 1,000 tareas."
+        "Arquitecté un flujo de parcheo de datos integrando Genesys, iPaaS y JavaScript para anexar metadatos a más de 2,000 tickets diarios, con análisis de datos en Python que habilitó modelado de regresión lineal.",
+        "Entregué más de 350 integraciones de sistemas y renové más de 30 informes de Power BI en más de 15 departamentos, apoyando a más de 100,000 usuarios y decisiones basadas en datos que ahorraron más de $110K al año.",
+        "Diseñé e implementé un sistema con IA que extrae artículos de bases de conocimiento a Markdown, optimizando la ingesta de datos para integración con LLM y gestionando de forma segura más de 5,000 interacciones semanales con alta precisión.",
+        "Consolidé una plataforma modular de CSAT con TypeScript, unificando 21 flujos distintos en una sola interfaz.",
+        "Aceleré la entrega de encuestas en un 93% al reingenierizar y simplificar flujos complejos en el backend."
       ]
     },
     {
-      "title": "Co-Fundador y Desarrollador",
-      "company": "Daily Disciple",
+      "title": "Co-Fundador",
+      "company": "Impulsa",
       "bullets": [
-        "Co-fundé una app con React, Expo y Node.js, lanzándola exitosamente a miles de usuarios activos.",
-        "Diseñé la plataforma para ayudar a los usuarios a planificar y rastrear metas espirituales y diarias, logrando un crecimiento mensual del 87%.",
-        "Implementé funciones de seguimiento en tiempo real, elevando la tasa de completitud de tareas en un 76% y reduciendo la deserción en un 32%."
+        "Fundé y escalé una plataforma de productividad integral a más de 18,000 usuarios activos, con alianzas estratégicas con Toyota, Microsoft, Google e Instituto Joule para modernizar flujos empresariales.",
+        "Presenté modelos de negocio a stakeholders para asegurar capital, contratando un equipo de ingeniería dedicado para expandir el mercado hispanohablante y acelerar la adquisición global de usuarios.",
+        "Desarrollé la infraestructura central con React, Expo y Node.js, con seguimiento en tiempo real que elevó la finalización de tareas en un 76% y redujo la deserción en un 32%."
+      ]
+    },
+    {
+      "title": "Asistente de Docencia en CS",
+      "company": "Brigham Young University - Idaho",
+      "bullets": [
+        "Validé arquitecturas nativas en la nube con AWS, Docker y Kubernetes, aplicando cumplimiento estricto de escalado serverless, optimización de recursos y prácticas de despliegue alineadas con la industria.",
+        "Instruí a más de 100 estudiantes en HTML, CSS y JavaScript avanzado, con estrategias interactivas para maximizar competencia, rendimiento frontend y comprensión fundamental.",
+        "Facilité buenas prácticas de CI/CD e IaC, optimizando envíos para más de 1,000 tareas automatizadas."
       ]
     },
     {
       "title": "Ingeniero de Software",
       "company": "FamilySearch",
       "bullets": [
-        "Ejecuté más de 350 casos de prueba en C# (NUnit) y Azure Functions, garantizando confiabilidad para 13.7M de usuarios.",
-        "Construí una función desde el concepto hasta el despliegue, ajustando la cobertura al 97% y eliminando las pruebas manuales.",
-        "Refactoricé más de 10,000 líneas de código, elevando el rendimiento en un 36% mediante suites de prueba en Azure."
-      ]
-    },
-    {
-      "title": "Desarrollador de Software",
-      "company": "Brigham Young University",
-      "bullets": [
-        "Arquitecté la plataforma CSAT de BYU en Genesys, Twilio API e iPaaS, habilitando retroalimentación automatizada para más de 70,000 personas.",
-        "Digitalicé Ayuda Financiera con JavaScript, iPaaS y TDX API, ahorrando más de $110K anuales para más de 100K usuarios.",
-        "Diseñé un sistema automatizado de parsing en TypeScript que impulsa más de 5,000 interacciones mensuales con el asistente de IA."
+        "Orquesté más de 100 lanzamientos automatizados con C# y Azure Functions como ingeniero de QA principal, mitigando riesgos de despliegue y logrando cero tiempo crítico inactivo para 13.7M de usuarios finales.",
+        "Migré pruebas manuales a pipelines de integración continua de extremo a extremo en C#, Java y Python, ampliando la cobertura de pruebas al 97% y eliminando cuellos de botella.",
+        "Refactoricé más de 10,000 líneas de código legado, mejorando el rendimiento del sistema en un 36% mediante suites de prueba optimizadas en Azure."
       ]
     },
     {
       "title": "Investigador",
       "company": "CCS Global Tech",
       "bullets": [
-        "Optimicé pipelines de datos en R, SQL, Snowflake y Python, incorporando el 87% de los análisis predictivos.",
-        "Rediseñé los flujos de trabajo del CRM consolidando la arquitectura UI/UX, elevando la productividad del personal en un 34% en más de 5,000 registros.",
-        "Mentoré a más de 20 ingenieros en buenas prácticas de datos y analítica."
+        "Optimicé pipelines de datos empresariales con R, SQL, Snowflake y Python, integrando el 87% de los modelos predictivos requeridos para decisiones basadas en datos e iniciativas estratégicas.",
+        "Renové arquitecturas UI/UX del CRM para aumentar la productividad del personal en un 34% en más de 5,000 registros, con dashboards más claros y navegación simplificada."
       ]
     },
     {
-      "title": "Técnico",
+      "title": "Técnico IT Nivel 3",
       "company": "Verizon",
       "bullets": [
-        "Programé una herramienta C#/ASP.NET para JIRA, aumentando el rendimiento del equipo en un 78% y optimizando los proyectos de flujo de trabajo.",
-        "Vinculé los flujos de MTAS/MSAT y Salesforce, generando $148K en ahorros anuales como líder técnico.",
-        "Simplifiqué procesos internos para Visible, aumentando la eficiencia del equipo y la consistencia en las entregas."
+        "Dirigí operaciones IT de nivel 3 para la división Visible de Verizon como líder técnico destacado, coordinando equipos multifuncionales para simplificar la entrega interna y mejorar métricas de resolución.",
+        "Programé una herramienta de integración C#/ASP.NET para JIRA que aumentó el rendimiento del equipo en un 78% y redujo los tiempos de entrega en un 34% en despliegues regionales.",
+        "Fortifiqué arquitecturas de seguridad y vinculé MTAS/MSAT con Salesforce, generando $148K en ahorros anuales."
       ]
     }
   ],
   "projects": {
     "title": "Proyectos",
-    "subtitle": "Cosas que he construido — desde apps con IA hasta herramientas de sistemas.",
+    "subtitle": "Cosas que he construido, desde apps con IA hasta herramientas de sistemas.",
     "view_github": "Ver en GitHub",
+    "details": "Ver detalles",
     "close": "Cerrar",
+    "private_notice": "Este proyecto es privado o esta alojado en otra organizacion.",
     "tech_label": "Stack Tecnológico",
     "highlights_label": "Destacados"
   },
@@ -113,6 +115,11 @@
       "metrics": ["$11K en ahorros identificados", "Más de 80 participantes en talleres", "7 talleres dirigidos", "Modelado predictivo aplicado"]
     },
     {
+      "description": "Una app colaborativa de tareas del hogar para roommates, construida con Expo y Firebase.",
+      "longDescription": "RoomiesChore es una app movil colaborativa construida con React Native, Expo y TypeScript para crear grupos, asignar tareas del hogar y dar seguimiento a responsabilidades compartidas. Incluye autenticacion con Firebase, sincronizacion en tiempo real con Firestore, fechas limite, prioridades y dashboard multiplataforma para iOS, Android y web.",
+      "metrics": ["Mas de 105 commits", "Sincronizacion Firestore en tiempo real", "Multiplataforma movil/web", "Asignacion de tareas por grupo"]
+    },
+    {
       "description": "Un mapa global interactivo que visualiza emociones de publicaciones sociales y mensajes de texto en tiempo real.",
       "longDescription": "Una plataforma de visualización de datos en tiempo real construida en Go que agrega sentimientos emocionales de publicaciones sociales y mensajes de texto y los renderiza en un mapa global interactivo en vivo. Emotisphere transforma datos de texto sin procesar en insights emocionales geográficos, ofreciendo una perspectiva única del estado de ánimo colectivo del mundo.",
       "metrics": ["Mapeo de sentimientos en tiempo real", "Visualización geográfica global", "Agregación de datos sociales", "Backend en Go"]
@@ -123,22 +130,16 @@
       "metrics": ["88% menos procesamiento manual", "Doble precisión de datos", "Más de 5,000 interacciones mensuales con IA", "Activación de horarios en tiempo real"]
     },
     {
+      "description": "Un juego 2D en Godot enfocado en movimiento, monedas, plataformas y mecanicas claras.",
+      "longDescription": "Stardew Like es un juego de plataformas 2D construido en Godot donde el jugador recorre niveles, recolecta monedas, evita killzones y usa plataformas moviles para completar objetivos. El proyecto incluye arte tipo pixel, efectos de sonido y un loop de gameplay bien definido, como proyecto practico de desarrollo de juegos en GDScript.",
+      "metrics": ["Godot 4.5+", "Sistemas de gameplay en GDScript", "Plataformas 2D pixel-art", "Mecanicas de nivel y hazards"]
+    },
+    {
       "description": "¿Importan los sentimientos en el mundo financiero actual? Un análisis en Python del sentimiento del mercado cripto vs. precio.",
       "longDescription": "Un proyecto de ciencia de datos que explora la relación entre el sentimiento social y el rendimiento del mercado de criptomonedas. Usando Python y técnicas de NLP, el proyecto analiza si el sentimiento público en redes sociales tiene una correlación estadísticamente significativa con los movimientos de precios en los mercados cripto.",
       "metrics": ["Correlación sentimiento vs. precio", "Pipeline NLP en Python", "Análisis de datos de mercado", "Modelado estadístico"]
     }
   ],
-  "skills": {
-    "title": "Habilidades",
-    "subtitle": "Las herramientas que uso y las que he dominado.",
-    "categories": {
-      "languages": "Lenguajes",
-      "frontend": "Frontend",
-      "backend": "Backend & Cloud",
-      "data": "Datos & ML",
-      "tools": "Herramientas & DevOps"
-    }
-  },
   "contact": {
     "title": "Construyamos Algo",
     "subtitle": "¿Tienes un proyecto, una idea, o simplemente quieres conectar? Me encantaría saber de ti.",

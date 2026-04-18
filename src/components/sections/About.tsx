@@ -22,7 +22,7 @@ export default function About() {
   const isInView = useInView(triggerRef, { once: true, margin: '-80px' });
 
   return (
-    <section id="about" className="relative py-24 px-4 sm:px-8 lg:px-16 xl:px-24 max-w-7xl mx-auto">
+    <section id="about" className="relative pt-24 pb-8 px-4 sm:px-8 lg:px-16 xl:px-24 max-w-7xl mx-auto">
       <div ref={triggerRef}>
         {/* Top row: label + toggle button */}
         <motion.div
@@ -49,7 +49,7 @@ export default function About() {
           </button>
         </motion.div>
 
-        {/* Education — always visible */}
+        {/* Education (always visible) */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
