@@ -4,14 +4,18 @@
     "experience": "Experience",
     "projects": "Projects",
     "contact": "Contact",
-    "resume": "Resume"
+    "resume": "Preview Resume"
   },
   "hero": {
     "greeting": "Hey, I'm",
     "name": "Owen Morales",
-    "roles": ["Software Engineer", "Data Scientist", "ML Engineer"],
+    "roles": [
+      "Software Engineer",
+      "Data Scientist",
+      "ML Engineer"
+    ],
     "cta_projects": "View My Work",
-    "cta_resume": "Download Resume",
+    "cta_resume": "Preview Resume",
     "scroll": "Scroll to explore"
   },
   "about": {
@@ -102,42 +106,82 @@
     {
       "description": "From feeling to meaning. An AI-powered reflection app that processes real-time sentiment and delivers daily personal insights.",
       "longDescription": "Built during BYU Hackathon, Phronesis is an Expo/React Native mobile app backed by Node.js and Firebase that processes over 1,000 user reflections. The app uses AssemblyAI for real-time sentiment analysis, delivering insights in under 5 seconds, and achieved a 41% correlation in its AI dashboards for 100+ active users.",
-      "metrics": ["100+ active users", "41% correlation in AI insights", "<5s sentiment processing", "1,000+ reflections processed"]
+      "metrics": [
+        "100+ active users",
+        "41% correlation in AI insights",
+        "<5s sentiment processing",
+        "1,000+ reflections processed"
+      ]
     },
     {
       "description": "Military-grade AES-256-GCM encryption for 6,000+ files with automated folder monitoring and CLI management tools.",
       "longDescription": "A Rust-based CLI application that watches directories for changes and automatically encrypts/decrypts files using AES-256-GCM. Features robust key management, background processing, and configurable sync via API or local LAN. Decreased manual input by 87% while securing thousands of files.",
-      "metrics": ["6,000+ files secured", "87% reduction in manual input", "AES-256-GCM encryption", "Background sync processing"]
+      "metrics": [
+        "6,000+ files secured",
+        "87% reduction in manual input",
+        "AES-256-GCM encryption",
+        "Background sync processing"
+      ]
     },
     {
       "description": "Led 7 workshops on Python, R, Tableau, and Power BI for 80+ participants, uncovering $11K in annual inefficiencies.",
       "longDescription": "A comprehensive data analytics initiative where AI/ML optimization models and reports were used to uncover operational inefficiencies worth $11,000 annually. Applied predictive modeling to drive data-informed decisions, and conducted workshops for 80+ participants on dashboard design and data pipelines.",
-      "metrics": ["$11K in savings identified", "80+ workshop participants", "7 workshops led", "Predictive modeling applied"]
+      "metrics": [
+        "$11K in savings identified",
+        "80+ workshop participants",
+        "7 workshops led",
+        "Predictive modeling applied"
+      ]
     },
     {
       "description": "A collaborative roommate chore tracker built with Expo and Firebase for shared task ownership.",
       "longDescription": "RoomiesChore is a collaborative mobile app built with React Native, Expo, and TypeScript that helps roommates create groups, assign chores, and track shared responsibilities. It includes Firebase authentication, Firestore real-time sync, due dates, priorities, and a cross-platform dashboard for iOS, Android, and web.",
-      "metrics": ["105+ commits", "Real-time Firestore sync", "Cross-platform mobile/web", "Group task assignment"]
+      "metrics": [
+        "105+ commits",
+        "Real-time Firestore sync",
+        "Cross-platform mobile/web",
+        "Group task assignment"
+      ]
     },
     {
       "description": "An interactive global map that visualizes emotions from social posts and text messages in real time.",
       "longDescription": "A real-time data visualization platform built in Go that aggregates emotional sentiment from social posts and text messages and renders them on a live, interactive global map. Emotisphere transforms raw text data into geographic emotional insights, providing a unique lens on the world's collective mood.",
-      "metrics": ["Real-time sentiment mapping", "Global geographic visualization", "Social data aggregation", "Go backend"]
+      "metrics": [
+        "Real-time sentiment mapping",
+        "Global geographic visualization",
+        "Social data aggregation",
+        "Go backend"
+      ]
     },
     {
       "description": "TypeScript/Node.js integration layer syncing JSON through TDX API, cutting manual processing by 88%.",
       "longDescription": "An automated TypeScript/Node.js application that syncs knowledge base articles through the TDX API, doubling data precision. Orchestrated an automated scraper and integration layer for Genesys, and engineered a module for position-based prompt activation from real-time schedules, transforming operational flow.",
-      "metrics": ["88% reduction in manual processing", "Double data precision", "5,000+ monthly AI interactions", "Real-time schedule activation"]
+      "metrics": [
+        "88% reduction in manual processing",
+        "Double data precision",
+        "5,000+ monthly AI interactions",
+        "Real-time schedule activation"
+      ]
     },
     {
       "description": "A 2D Godot game focused on movement, coins, platforms, and clean gameplay loops.",
       "longDescription": "Stardew Like is a 2D platformer built in Godot where players move through levels, collect coins, avoid killzones, and use moving platforms to complete objectives. The project includes pixel-art visuals, sound effects, and a clear gameplay loop, and serves as a focused game development project in GDScript.",
-      "metrics": ["Godot 4.5+", "GDScript gameplay systems", "Pixel-art platformer", "Level mechanics + hazards"]
+      "metrics": [
+        "Godot 4.5+",
+        "GDScript gameplay systems",
+        "Pixel-art platformer",
+        "Level mechanics + hazards"
+      ]
     },
     {
       "description": "Do sentiments matter in the current financial world? A Python-powered analysis of crypto market sentiment vs. price.",
       "longDescription": "A data science project exploring the relationship between social sentiment and cryptocurrency market performance. Using Python and NLP techniques, the project analyzes whether public sentiment on social media platforms has a statistically significant correlation with price movements in crypto markets.",
-      "metrics": ["Sentiment vs. price correlation", "Python NLP pipeline", "Market data analysis", "Statistical modeling"]
+      "metrics": [
+        "Sentiment vs. price correlation",
+        "Python NLP pipeline",
+        "Market data analysis",
+        "Statistical modeling"
+      ]
     }
   ],
   "contact": {
@@ -154,8 +198,8 @@
     "success": "Message sent! I'll get back to you soon.",
     "error": "Something went wrong. Please try again.",
     "or": "or",
-    "resume_cta": "Download my resume to learn more about my background.",
-    "resume_button": "Download Resume"
+    "resume_cta": "Preview my resume before downloading it.",
+    "resume_button": "Preview Resume"
   },
   "footer": {
     "tagline": "Bult with curiosity. Deployed with care.",

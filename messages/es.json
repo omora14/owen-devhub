@@ -4,14 +4,18 @@
     "experience": "Experiencia",
     "projects": "Proyectos",
     "contact": "Contacto",
-    "resume": "Currículum"
+    "resume": "Ver Currículum"
   },
   "hero": {
     "greeting": "Hola, soy",
     "name": "Owen Morales",
-    "roles": ["Ingeniero de Software", "Científico de Datos", "Ingeniero ML"],
+    "roles": [
+      "Ingeniero de Software",
+      "Científico de Datos",
+      "Ingeniero ML"
+    ],
     "cta_projects": "Ver Mi Trabajo",
-    "cta_resume": "Descargar Currículum",
+    "cta_resume": "Ver Currículum",
     "scroll": "Desliza para explorar"
   },
   "about": {
@@ -102,42 +106,82 @@
     {
       "description": "Del sentimiento al significado. Una app de reflexión con IA que procesa sentimientos en tiempo real y entrega insights personales diarios.",
       "longDescription": "Construida durante el Hackathon de BYU, Phronesis es una app móvil en Expo/React Native respaldada por Node.js y Firebase que procesa más de 1,000 reflexiones de usuarios. La app usa AssemblyAI para análisis de sentimiento en tiempo real, entregando insights en menos de 5 segundos, con una correlación del 41% en sus dashboards de IA para más de 100 usuarios activos.",
-      "metrics": ["Más de 100 usuarios activos", "41% de correlación en insights de IA", "<5s en procesamiento de sentimientos", "Más de 1,000 reflexiones procesadas"]
+      "metrics": [
+        "Más de 100 usuarios activos",
+        "41% de correlación en insights de IA",
+        "<5s en procesamiento de sentimientos",
+        "Más de 1,000 reflexiones procesadas"
+      ]
     },
     {
       "description": "Cifrado militar AES-256-GCM para más de 6,000 archivos con monitoreo automatizado de carpetas y herramientas de gestión CLI.",
       "longDescription": "Una aplicación CLI basada en Rust que monitorea directorios y cifra/descifra archivos automáticamente usando AES-256-GCM. Incluye gestión robusta de claves, procesamiento en segundo plano y sincronización configurable vía API o LAN local. Redujo la intervención manual en un 87% mientras protege miles de archivos.",
-      "metrics": ["Más de 6,000 archivos protegidos", "87% menos intervención manual", "Cifrado AES-256-GCM", "Procesamiento de sincronización en segundo plano"]
+      "metrics": [
+        "Más de 6,000 archivos protegidos",
+        "87% menos intervención manual",
+        "Cifrado AES-256-GCM",
+        "Procesamiento de sincronización en segundo plano"
+      ]
     },
     {
       "description": "Dirigí 7 talleres sobre Python, R, Tableau y Power BI para más de 80 participantes, descubriendo $11K en ineficiencias anuales.",
       "longDescription": "Una iniciativa integral de analítica de datos donde se usaron modelos de optimización con IA/ML para descubrir ineficiencias operativas por $11,000 anuales. Se aplicó modelado predictivo para tomar decisiones basadas en datos, y se realizaron talleres para más de 80 participantes sobre diseño de dashboards y pipelines de datos.",
-      "metrics": ["$11K en ahorros identificados", "Más de 80 participantes en talleres", "7 talleres dirigidos", "Modelado predictivo aplicado"]
+      "metrics": [
+        "$11K en ahorros identificados",
+        "Más de 80 participantes en talleres",
+        "7 talleres dirigidos",
+        "Modelado predictivo aplicado"
+      ]
     },
     {
       "description": "Una app colaborativa de tareas del hogar para roommates, construida con Expo y Firebase.",
       "longDescription": "RoomiesChore es una app movil colaborativa construida con React Native, Expo y TypeScript para crear grupos, asignar tareas del hogar y dar seguimiento a responsabilidades compartidas. Incluye autenticacion con Firebase, sincronizacion en tiempo real con Firestore, fechas limite, prioridades y dashboard multiplataforma para iOS, Android y web.",
-      "metrics": ["Mas de 105 commits", "Sincronizacion Firestore en tiempo real", "Multiplataforma movil/web", "Asignacion de tareas por grupo"]
+      "metrics": [
+        "Mas de 105 commits",
+        "Sincronizacion Firestore en tiempo real",
+        "Multiplataforma movil/web",
+        "Asignacion de tareas por grupo"
+      ]
     },
     {
       "description": "Un mapa global interactivo que visualiza emociones de publicaciones sociales y mensajes de texto en tiempo real.",
       "longDescription": "Una plataforma de visualización de datos en tiempo real construida en Go que agrega sentimientos emocionales de publicaciones sociales y mensajes de texto y los renderiza en un mapa global interactivo en vivo. Emotisphere transforma datos de texto sin procesar en insights emocionales geográficos, ofreciendo una perspectiva única del estado de ánimo colectivo del mundo.",
-      "metrics": ["Mapeo de sentimientos en tiempo real", "Visualización geográfica global", "Agregación de datos sociales", "Backend en Go"]
+      "metrics": [
+        "Mapeo de sentimientos en tiempo real",
+        "Visualización geográfica global",
+        "Agregación de datos sociales",
+        "Backend en Go"
+      ]
     },
     {
       "description": "Capa de integración TypeScript/Node.js que sincroniza JSON a través de TDX API, reduciendo el procesamiento manual en un 88%.",
       "longDescription": "Una aplicación automatizada en TypeScript/Node.js que sincroniza artículos de bases de conocimiento a través de TDX API, duplicando la precisión de los datos. Orquestó un scraper automático y una capa de integración para Genesys, e implementó un módulo de activación de prompts basado en posición desde horarios en tiempo real, transformando el flujo operativo.",
-      "metrics": ["88% menos procesamiento manual", "Doble precisión de datos", "Más de 5,000 interacciones mensuales con IA", "Activación de horarios en tiempo real"]
+      "metrics": [
+        "88% menos procesamiento manual",
+        "Doble precisión de datos",
+        "Más de 5,000 interacciones mensuales con IA",
+        "Activación de horarios en tiempo real"
+      ]
     },
     {
       "description": "Un juego 2D en Godot enfocado en movimiento, monedas, plataformas y mecanicas claras.",
       "longDescription": "Stardew Like es un juego de plataformas 2D construido en Godot donde el jugador recorre niveles, recolecta monedas, evita killzones y usa plataformas moviles para completar objetivos. El proyecto incluye arte tipo pixel, efectos de sonido y un loop de gameplay bien definido, como proyecto practico de desarrollo de juegos en GDScript.",
-      "metrics": ["Godot 4.5+", "Sistemas de gameplay en GDScript", "Plataformas 2D pixel-art", "Mecanicas de nivel y hazards"]
+      "metrics": [
+        "Godot 4.5+",
+        "Sistemas de gameplay en GDScript",
+        "Plataformas 2D pixel-art",
+        "Mecanicas de nivel y hazards"
+      ]
     },
     {
       "description": "¿Importan los sentimientos en el mundo financiero actual? Un análisis en Python del sentimiento del mercado cripto vs. precio.",
       "longDescription": "Un proyecto de ciencia de datos que explora la relación entre el sentimiento social y el rendimiento del mercado de criptomonedas. Usando Python y técnicas de NLP, el proyecto analiza si el sentimiento público en redes sociales tiene una correlación estadísticamente significativa con los movimientos de precios en los mercados cripto.",
-      "metrics": ["Correlación sentimiento vs. precio", "Pipeline NLP en Python", "Análisis de datos de mercado", "Modelado estadístico"]
+      "metrics": [
+        "Correlación sentimiento vs. precio",
+        "Pipeline NLP en Python",
+        "Análisis de datos de mercado",
+        "Modelado estadístico"
+      ]
     }
   ],
   "contact": {
@@ -154,8 +198,8 @@
     "success": "¡Mensaje enviado! Me comunicaré contigo pronto.",
     "error": "Algo salió mal. Por favor intenta de nuevo.",
     "or": "o",
-    "resume_cta": "Descarga mi currículum para conocer más sobre mi trayectoria.",
-    "resume_button": "Descargar Currículum"
+    "resume_cta": "Mira mi currículum antes de descargarlo.",
+    "resume_button": "Ver Currículum"
   },
   "footer": {
     "tagline": "Construido con curiosidad. Desplegado con cuidado.",

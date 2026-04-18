@@ -136,8 +136,7 @@ export default function Navbar() {
 
             {/* Resume button (desktop) */}
             <a
-              href="/Owen-Morales-Resume.pdf"
-              download
+              href={`/${locale}/resume`}
               className={cn(
                 'hidden md:flex items-center gap-2 px-4 py-1.5 rounded-lg text-sm font-medium transition-all duration-200',
                 scrolled
@@ -187,8 +186,7 @@ export default function Navbar() {
               ))}
               <div className="mt-2 pt-4 border-t border-white/10">
                 <a
-                  href="/Owen-Morales-Resume.pdf"
-                  download
+                  href={`/${locale}/resume`}
                   onClick={() => setMenuOpen(false)}
                   className="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-lg bg-sunset-orange/15 border border-sunset-orange/40 text-sunset-orange text-sm font-medium hover:bg-sunset-orange hover:text-white transition-all duration-200"
                 >

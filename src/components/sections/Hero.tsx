@@ -1,10 +1,11 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { motion } from 'framer-motion';
 import { ChevronDown, Download, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 function Typewriter({ words }: { words: string[] }) {
   const [displayed, setDisplayed] = useState('');
@@ -41,6 +42,7 @@ function Typewriter({ words }: { words: string[] }) {
 
 export default function Hero() {
   const t = useTranslations('hero');
+  const locale = useLocale();
   const roles = t.raw('roles') as string[];
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -176,14 +178,13 @@ export default function Hero() {
             {t('cta_projects')}
             <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
           </button>
-          <a
-            href="/Owen-Morales-Resume.pdf"
-            download
+          <Link
+            href={`/${locale}/resume`}
             className="group flex items-center gap-2 px-7 py-3.5 rounded-xl border border-white/25 text-sand-warm/85 font-semibold text-sm hover:border-sunset-orange/60 hover:text-sunset-orange hover:bg-sunset-orange/10 transition-all duration-300"
           >
             <Download size={16} className="group-hover:translate-y-0.5 transition-transform" />
             {t('cta_resume')}
-          </a>
+          </Link>
         </motion.div>
       </div>
 

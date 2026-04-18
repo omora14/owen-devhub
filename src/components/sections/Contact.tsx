@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef, useState, FormEvent } from 'react';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { motion, useInView } from 'framer-motion';
 import { Send, Download, CheckCircle, AlertCircle, Mail, MessageSquare } from 'lucide-react';
 import emailjs from '@emailjs/browser';
@@ -18,6 +18,7 @@ type FormStatus = 'idle' | 'sending' | 'success' | 'error';
 
 export default function Contact() {
   const t = useTranslations('contact');
+  const locale = useLocale();
   const headerRef = useRef(null);
   const formRef = useRef<HTMLFormElement>(null);
   const isHeaderInView = useInView(headerRef, { once: true, margin: '-80px' });
@@ -215,8 +216,7 @@ export default function Contact() {
               {t('resume_cta')}
             </p>
             <a
-              href="/Owen-Morales-Resume.pdf"
-              download
+              href={`/${locale}/resume`}
               className="flex items-center justify-center gap-2 w-full px-5 py-3 rounded-xl bg-sunset-orange/12 border border-sunset-orange/35 text-sunset-orange text-sm font-medium hover:bg-sunset-orange hover:text-white transition-all duration-200"
             >
               <Download size={15} />

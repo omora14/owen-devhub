@@ -2,9 +2,11 @@
 
 import { useTranslations } from 'next-intl';
 import { Download, ExternalLink } from 'lucide-react';
+import { useLocale } from 'next-intl';
 
 export default function Footer() {
   const t = useTranslations('footer');
+  const locale = useLocale();
   const year = new Date().getFullYear();
 
   return (
@@ -78,12 +80,11 @@ export default function Footer() {
                 <ExternalLink size={11} className="opacity-0 group-hover:opacity-100 transition-opacity" />
               </a>
               <a
-                href="/Owen-Morales-Resume.pdf"
-                download
+                href={`/${locale}/resume`}
                 className="flex items-center gap-2.5 text-sm text-sand-warm/55 hover:text-sunset-orange transition-colors duration-200 group"
               >
                 <Download size={14} className="flex-shrink-0" />
-                <span>Download Resume</span>
+                <span>Preview Resume</span>
               </a>
             </div>
           </div>
