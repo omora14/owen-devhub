@@ -6,6 +6,7 @@ import { useRouter, usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Globe } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import ResumeLink from '@/components/ResumeLink';
 
 const navLinks = [
   { key: 'about', href: '#about' },
@@ -135,8 +136,8 @@ export default function Navbar() {
             </button>
 
             {/* Resume button (desktop) */}
-            <a
-              href={`/${locale}/resume`}
+            <ResumeLink
+              locale={locale}
               className={cn(
                 'hidden md:flex items-center gap-2 px-4 py-1.5 rounded-lg text-sm font-medium transition-all duration-200',
                 scrolled
@@ -145,7 +146,7 @@ export default function Navbar() {
               )}
             >
               {t('resume')}
-            </a>
+            </ResumeLink>
 
             {/* Mobile menu toggle */}
             <button
@@ -185,13 +186,13 @@ export default function Navbar() {
                 </button>
               ))}
               <div className="mt-2 pt-4 border-t border-white/10">
-                <a
-                  href={`/${locale}/resume`}
+                <ResumeLink
+                  locale={locale}
                   onClick={() => setMenuOpen(false)}
                   className="flex items-center justify-center gap-2 w-full px-4 py-3 rounded-lg bg-sunset-orange/15 border border-sunset-orange/40 text-sunset-orange text-sm font-medium hover:bg-sunset-orange hover:text-white transition-all duration-200"
                 >
                   {t('resume')}
-                </a>
+                </ResumeLink>
               </div>
             </div>
           </motion.div>

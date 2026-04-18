@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl';
 import { Download, ExternalLink } from 'lucide-react';
 import { useLocale } from 'next-intl';
+import ResumeLink from '@/components/ResumeLink';
 
 export default function Footer() {
   const t = useTranslations('footer');
@@ -79,13 +80,13 @@ export default function Footer() {
                 <span>LinkedIn</span>
                 <ExternalLink size={11} className="opacity-0 group-hover:opacity-100 transition-opacity" />
               </a>
-              <a
-                href={`/${locale}/resume`}
+              <ResumeLink
+                locale={locale}
                 className="flex items-center gap-2.5 text-sm text-sand-warm/55 hover:text-sunset-orange transition-colors duration-200 group"
               >
                 <Download size={14} className="flex-shrink-0" />
                 <span>Preview Resume</span>
-              </a>
+              </ResumeLink>
             </div>
           </div>
         </div>

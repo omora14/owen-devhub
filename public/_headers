@@ -5,7 +5,6 @@
   Permissions-Policy: camera=(), microphone=(), geolocation=()
 
 /Owen-Morales-Resume.pdf
-  Content-Disposition: attachment; filename="Owen-Morales-Resume.pdf"
   Cache-Control: public, max-age=3600
 
 /*.jpg

@@ -5,7 +5,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import { motion } from 'framer-motion';
 import { ChevronDown, Download, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
-import Link from 'next/link';
+import ResumeLink from '@/components/ResumeLink';
 
 function Typewriter({ words }: { words: string[] }) {
   const [displayed, setDisplayed] = useState('');
@@ -178,13 +178,13 @@ export default function Hero() {
             {t('cta_projects')}
             <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
           </button>
-          <Link
-            href={`/${locale}/resume`}
+          <ResumeLink
+            locale={locale}
             className="group flex items-center gap-2 px-7 py-3.5 rounded-xl border border-white/25 text-sand-warm/85 font-semibold text-sm hover:border-sunset-orange/60 hover:text-sunset-orange hover:bg-sunset-orange/10 transition-all duration-300"
           >
             <Download size={16} className="group-hover:translate-y-0.5 transition-transform" />
             {t('cta_resume')}
-          </Link>
+          </ResumeLink>
         </motion.div>
       </div>
 
